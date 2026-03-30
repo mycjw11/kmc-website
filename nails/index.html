@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KMC Nail Artistry | K Miracle Custom Services</title>
+  <meta name="description" content="KMC Nail Artistry — Custom press-ons, gel nails, acrylic nails. Ships worldwide. Book via Instagram @KMC_NailArt." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    body { background: var(--light-bg); color: var(--light-text); font-family: var(--font-sans); }
+
+    .nav { background: var(--light-card); border-bottom: 0.5px solid var(--light-border); }
+    .nav-back { color: var(--light-faint); }
+    .nav-logo-ph { border: 0.5px dashed var(--light-lavender); }
+    .nav-logo-ph span { color: var(--light-lavender); }
+    .nav-links { color: var(--light-muted); }
+
+    /* HERO */
+    .hero { display: grid; grid-template-columns: 1fr 1fr; min-height: 390px; }
+    .hero-left { padding: 4rem 2.5rem; display: flex; flex-direction: column; justify-content: center; }
+    .hero-tag { font-size: 9px; letter-spacing: 4px; color: var(--light-morandi); text-transform: uppercase; margin-bottom: 1rem; }
+    .hero-title { font-family: var(--font-serif); font-size: 42px; font-weight: 300; line-height: 1.2; color: var(--light-deep); margin-bottom: 0.2rem; }
+    .hero-title em { color: var(--light-morandi); font-style: italic; }
+    .hero-zh { font-size: 13px; letter-spacing: 4px; color: var(--light-lavender); margin-bottom: 1.6rem; }
+    .hero-desc { font-size: 12px; line-height: 2; color: var(--light-muted); margin-bottom: 1.8rem; max-width: 340px; }
+    .btn-p { display: inline-block; font-size: 10px; letter-spacing: 2px; background: var(--light-deep); color: #f0eaf8; padding: 11px 26px; border-radius: var(--radius-pill); text-transform: uppercase; margin-right: 1rem; }
+    .btn-s { font-size: 10px; letter-spacing: 2px; color: var(--light-morandi); text-transform: uppercase; }
+    .hero-right { background: var(--light-soft); display: flex; align-items: center; justify-content: center; }
+    .img-ph { width: 200px; height: 260px; border: 0.5px dashed var(--light-lavender); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.5); }
+    .img-ph span { font-size: 9px; letter-spacing: 1.5px; color: var(--light-lavender); text-align: center; line-height: 1.6; }
+
+    .divider { background: var(--light-lavender); }
+    .sec-label { color: var(--light-morandi); }
+    .sec-title { color: var(--light-deep); }
+    .sec-zh { color: var(--light-faint); }
+    .cat-label-text { color: var(--light-morandi); }
+    .cat-line { background: var(--light-border); }
+
+    /* PRESS-ON */
+    .press-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--light-border); margin: 0 2rem; border: 0.5px solid var(--light-border); border-radius: var(--radius-md); overflow: hidden; }
+    .press-card { padding: 2.2rem 2rem; background: var(--light-card); }
+    .press-card.featured { background: var(--light-soft); }
+    .badge-ready { background: #fff; color: var(--light-morandi); border: 0.5px solid var(--light-border); }
+    .badge-custom { background: var(--light-deep); color: #f0eaf8; }
+    .press-title { font-family: var(--font-serif); font-size: 20px; color: var(--light-deep); margin-bottom: 0.15rem; }
+    .press-title-zh { font-size: 10px; letter-spacing: 2px; color: var(--light-faint); margin-bottom: 1rem; }
+    .press-desc { font-size: 11px; line-height: 1.9; color: var(--light-muted); margin-bottom: 1.2rem; }
+    .size-row { display: flex; gap: 6px; margin-bottom: 1rem; }
+    .size-tag { font-size: 10px; font-weight: 500; color: var(--light-morandi); background: #fff; border: 0.5px solid var(--light-border); padding: 4px 12px; border-radius: var(--radius-sm); }
+    .press-features { margin-bottom: 1.2rem; }
+    .press-feature { font-size: 10px; color: var(--light-muted); line-height: 1.8; padding-left: 0.8rem; border-left: 1.5px solid var(--light-lavender); margin-bottom: 0.4rem; }
+    .press-price { font-size: 12px; color: var(--light-morandi); letter-spacing: 1px; margin-bottom: 0.3rem; }
+    .press-price-note { font-size: 10px; color: var(--light-faint); font-style: italic; }
+    .press-btn { display: inline-block; font-size: 9px; letter-spacing: 2px; border: 0.5px solid; padding: 8px 18px; border-radius: var(--radius-pill); text-transform: uppercase; margin-top: 1rem; }
+    .btn-shop { color: var(--light-morandi); border-color: var(--light-lavender); }
+    .btn-enquire { color: #f0eaf8; background: var(--light-deep); border-color: var(--light-deep); }
+    .press-note { text-align: center; font-size: 10px; color: var(--light-faint); font-style: italic; }
+
+    /* NAIL SERVICES */
+    .svc-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; margin: 0 2rem; }
+    .svc { padding: 1.8rem 1.5rem; background: var(--light-card); border: 0.5px solid var(--light-border); border-radius: var(--radius-md); text-align: center; }
+    .svc-name { font-family: var(--font-serif); font-size: 18px; color: var(--light-deep); margin-bottom: 0.2rem; }
+    .svc-name-zh { font-size: 10px; letter-spacing: 2px; color: var(--light-faint); margin-bottom: 0.8rem; }
+    .svc-desc { font-size: 11px; line-height: 1.85; color: var(--light-muted); margin-bottom: 1rem; }
+    .svc-price { font-size: 11px; color: var(--light-morandi); letter-spacing: 1px; }
+
+    /* GALLERY */
+    .gallery-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 8px; margin: 0 2rem; }
+    .gallery-item { aspect-ratio: 1; background: var(--light-soft); border: 0.5px solid var(--light-border); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+    .gallery-item span { font-size: 8px; letter-spacing: 1px; color: var(--light-lavender); text-align: center; }
+
+    /* SHOP BANNER */
+    .shop-banner { margin: 0 2rem; padding: 1.8rem 2rem; background: var(--light-soft); border: 0.5px solid var(--light-border); border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center; }
+    .shop-text-main { font-family: var(--font-serif); font-size: 20px; color: var(--light-deep); margin-bottom: 0.2rem; }
+    .shop-text-sub { font-size: 11px; color: var(--light-muted); line-height: 1.7; }
+    .shop-btn { display: inline-block; font-size: 10px; letter-spacing: 2px; background: var(--light-deep); color: #f0eaf8; padding: 10px 22px; border-radius: var(--radius-pill); text-transform: uppercase; white-space: nowrap; }
+
+    /* BOOK */
+    .ig-section { text-align: center; padding: 2.5rem 2rem; }
+    .ig-handle { font-family: var(--font-serif); font-size: 20px; font-weight: 300; color: var(--light-deep); margin: 0.5rem 0; }
+    .ig-desc { font-size: 11px; color: var(--light-muted); line-height: 1.8; }
+    .ig-btn { display: inline-flex; align-items: center; gap: 8px; font-size: 10px; letter-spacing: 2px; color: var(--light-morandi); border: 0.5px solid var(--light-lavender); padding: 10px 26px; border-radius: var(--radius-pill); text-transform: uppercase; margin-top: 1rem; }
+
+    .site-footer { background: var(--light-card); border-top: 0.5px solid var(--light-border); color: var(--light-faint); }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a class="nav-back" href="../">← K Miracle Custom Services</a>
+    <div class="nav-logo-ph"><span>YOUR<br>LOGO</span></div>
+    <div class="nav-links">
+      <a href="#services">Services 服務</a>
+      <a href="#gallery">Gallery 作品集</a>
+      <a href="#book">Book 預約</a>
+      <a href="#">EN | 中文</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left">
+        <div class="hero-tag">KMC Nail Artistry</div>
+        <h1 class="hero-title">Art you wear<br>on your <em>fingertips.</em></h1>
+        <div class="hero-zh">每一套，皆為專屬於您的藝術</div>
+        <p class="hero-desc">
+          以穿戴甲為主打，同時提供凝膠甲及水晶甲服務。無論是即買即用的現貨，還是度身訂製的專屬設計，每一套均以細緻工藝呈現您的個人風格。<br><br>
+          Press-ons are our speciality — alongside gel and acrylic nail services. Ready-made or fully custom, every set is crafted with care.
+        </p>
+        <div>
+          <a class="btn-p" href="https://www.instagram.com/KMC_NailArt" target="_blank">預約 / 選購 Book & Shop</a>
+          <a class="btn-s" href="#gallery">View Gallery →</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="img-ph"><span>YOUR<br>HERO<br>PHOTO</span></div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="sec-label">Services</div>
+      <div class="sec-title">What we offer 服務項目</div>
+      <div class="sec-zh">穿戴甲 · 凝膠甲 · 水晶甲 · 拆除</div>
+
+      <!-- PRESS-ONS -->
+      <div class="cat-wrap">
+        <div class="cat-header">
+          <span class="cat-icon">💅</span>
+          <span class="cat-label-text">Press-On Nails 穿戴甲（主打）</span>
+          <div class="cat-line"></div>
+        </div>
+        <div class="press-grid">
+          <div class="press-card">
+            <div class="badge badge-ready">Ready to Ship 現貨</div>
+            <div class="press-title">Ready-Made Press-Ons</div>
+            <div class="press-title-zh">現貨穿戴甲</div>
+            <p class="press-desc">精選設計現貨，提供三款通用尺寸，即買即用。適合初次嘗試穿戴甲，或希望快速入手的客人。<br><br>Pre-designed sets in three standard sizes — ready to ship immediately.</p>
+            <div class="size-row">
+              <div class="size-tag">S</div>
+              <div class="size-tag">M</div>
+              <div class="size-tag">L</div>
+            </div>
+            <div class="press-features">
+              <div class="press-feature">可重複使用 · Reusable</div>
+              <div class="press-feature">附安裝說明 · Includes fitting instructions</div>
+              <div class="press-feature">郵寄全球 · Ships worldwide</div>
+            </div>
+            <div class="press-price">From $XX AUD</div>
+            <div class="press-price-note">於 KMC Boutique 選購 · Available in KMC Boutique</div>
+            <a class="press-btn btn-shop" href="../boutique/">Shop Now →</a>
+          </div>
+          <div class="press-card featured">
+            <div class="badge badge-custom">Custom Order 訂製</div>
+            <div class="press-title">Custom Press-Ons</div>
+            <div class="press-title-zh">訂製穿戴甲</div>
+            <p class="press-desc">按照您的甲形、尺寸及設計全面訂製，確保完美貼合。圖案、色彩、甲形均可自由選擇，每套均為獨一無二的專屬作品。<br><br>Made to your exact measurements and design — entirely one of a kind.</p>
+            <div class="press-features">
+              <div class="press-feature">度身量甲，完美貼合 · Fitted to your exact shape</div>
+              <div class="press-feature">設計全面訂製 · Fully custom design</div>
+              <div class="press-feature">可重複使用 · Reusable</div>
+              <div class="press-feature">郵寄全球 · Ships worldwide</div>
+            </div>
+            <div class="press-price">From $XX AUD</div>
+            <div class="press-price-note">訂製價格較現貨為高 · Priced higher than ready-made</div>
+            <a class="press-btn btn-enquire" href="https://www.instagram.com/KMC_NailArt" target="_blank">Enquire via Instagram →</a>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <p class="press-note">所有穿戴甲均附安裝說明 · All sets include fitting instructions</p>
+      </div>
+
+      <!-- OTHER NAIL SERVICES -->
+      <div class="cat-wrap">
+        <div class="cat-header">
+          <span class="cat-icon">✨</span>
+          <span class="cat-label-text">Nail Services 美甲服務</span>
+          <div class="cat-line"></div>
+        </div>
+        <div class="svc-grid">
+          <div class="svc">
+            <div class="svc-name">Gel Nails</div>
+            <div class="svc-name-zh">凝膠美甲</div>
+            <p class="svc-desc">採用凝膠配方，持久耐磨，圖案及色彩均可全面訂製，適合日常或特別場合。<br><br>Long-lasting gel formula with fully customisable designs — for everyday wear or special occasions.</p>
+            <div class="svc-price">DM to enquire</div>
+          </div>
+          <div class="svc">
+            <div class="svc-name">Acrylic Nails</div>
+            <div class="svc-name-zh">水晶甲</div>
+            <p class="svc-desc">結構穩固，適合需要延長甲形或偏好較強硬度的客人，可配合各種甲面設計。<br><br>Durable acrylic structure — ideal for extensions or extra strength, paired with any design.</p>
+            <div class="svc-price">DM to enquire</div>
+          </div>
+          <div class="svc">
+            <div class="svc-name">Nail Removal</div>
+            <div class="svc-name-zh">美甲拆除</div>
+            <p class="svc-desc">專業安全拆除凝膠甲及水晶甲，盡量減少對天然甲的損傷。<br><br>Safe and professional removal of gel and acrylic nails, minimising damage to the natural nail.</p>
+            <div class="svc-price">DM to enquire</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- GALLERY -->
+    <section id="gallery">
+      <div class="sec-label">Portfolio</div>
+      <div class="sec-title">Our work 作品集</div>
+      <div class="sec-zh">部分作品展示</div>
+      <div class="gallery-grid">
+        <div class="gallery-item"><span>PHOTO 1</span></div>
+        <div class="gallery-item"><span>PHOTO 2</span></div>
+        <div class="gallery-item"><span>PHOTO 3</span></div>
+        <div class="gallery-item"><span>PHOTO 4</span></div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- SHOP BANNER -->
+    <div class="shop-banner">
+      <div>
+        <div class="shop-text-main">Shop Nail Products 美甲產品</div>
+        <p class="shop-text-sub">現貨穿戴甲、美甲工具及相關產品，於 KMC Boutique 選購。<br>Press-ons, nail tools and accessories available in the KMC Boutique.</p>
+      </div>
+      <a class="shop-btn" href="../boutique/">Shop Now →</a>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- BOOK -->
+    <section id="book" class="ig-section">
+      <div class="sec-label">Ready to book?</div>
+      <div class="ig-handle">@KMC_NailArt</div>
+      <p class="ig-desc">Instagram 私訊預約，歡迎附上參考圖片。<br>Send us a DM on Instagram to book — feel free to include any reference images.</p>
+      <a class="ig-btn" href="https://www.instagram.com/KMC_NailArt" target="_blank">Book on Instagram →</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>© 2025 KMC Nail Artistry · K Miracle Custom Services · kmcservices.com.au</div>
+  </footer>
+
+</body>
+</html>

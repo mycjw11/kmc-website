@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Montserrat:wght@300;400;500&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* Shared */
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Montserrat', sans-serif;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-pill: 24px;
+
+  /* Dark (Mystic / Main) */
+  --dark-bg: #07050f;
+  --dark-card: #0e0a1a;
+  --dark-mid: #110d1f;
+  --dark-text: #e8deff;
+  --dark-muted: rgba(200,170,255,0.58);
+  --dark-dim: rgba(180,140,255,0.38);
+  --dark-dimmer: rgba(180,140,255,0.15);
+  --dark-soft: #c5a8ff;
+  --dark-border: rgba(155,110,255,0.14);
+
+  /* Light (Nail) */
+  --light-bg: #faf8f5;
+  --light-card: #ffffff;
+  --light-soft: #ede8f7;
+  --light-deep: #3d2b5e;
+  --light-morandi: #8b7aa8;
+  --light-lavender: #c4b0e0;
+  --light-text: #2e2040;
+  --light-muted: #7a6a8a;
+  --light-faint: #b0a0c0;
+  --light-border: rgba(180,150,220,0.18);
+}
+
+body { font-family: var(--font-sans); }
+
+a { text-decoration: none; color: inherit; }
+
+/* NAV shared */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+}
+.nav-logo-ph {
+  width: 52px; height: 52px;
+  border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+}
+.nav-logo-ph span { font-size: 8px; letter-spacing: 1px; text-align: center; line-height: 1.5; }
+.nav-links { display: flex; gap: 1.8rem; font-size: 10px; letter-spacing: 2px; }
+.nav-back { font-size: 10px; letter-spacing: 2px; }
+
+/* DIVIDER */
+.divider { width: 36px; height: 0.5px; margin: 2.8rem auto; }
+
+/* SECTION LABELS */
+.sec-label { text-align: center; font-size: 9px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 0.5rem; }
+.sec-title { text-align: center; font-family: var(--font-serif); font-size: 26px; font-weight: 300; margin-bottom: 0.3rem; }
+.sec-zh { text-align: center; font-size: 11px; letter-spacing: 3px; margin-bottom: 2rem; }
+
+/* CATEGORY HEADER */
+.cat-wrap { margin: 0 2rem 2rem; }
+.cat-header { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem; }
+.cat-icon { font-size: 15px; opacity: 0.7; }
+.cat-label-text { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; white-space: nowrap; }
+.cat-line { flex: 1; height: 0.5px; }
+
+/* BADGE */
+.badge { display: inline-block; font-size: 8px; letter-spacing: 2px; padding: 3px 10px; border-radius: 12px; text-transform: uppercase; margin-bottom: 0.6rem; }
+
+/* FOOTER */
+.site-footer { text-align: center; padding: 1.8rem; font-size: 9px; letter-spacing: 2px; }
