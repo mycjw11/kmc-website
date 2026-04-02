@@ -1,314 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>KMC Mystic by Kyra | K Miracle Custom Services</title>
-  <meta name="description" content="KMC Mystic by Kyra — Tarot, Astrology, Reiki Healing, Witchcraft and more. East meets West. Book via Instagram @KMC_Mystic." />
-  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="../css/style.css"/>
   <style>
-    body { background: var(--dark-bg); color: var(--dark-text); font-family: var(--font-sans); }
-
-    .nav { border-bottom: 0.5px solid var(--dark-border); }
-    .nav-back { color: var(--dark-dim); font-size: 13px; letter-spacing: 2px; }
-    .nav-logo-ph { border: 0.5px dashed var(--dark-dimmer); }
-    .nav-logo-ph span { color: var(--dark-dim); font-size: 9px; }
-    .nav-links { color: var(--dark-dim); display: flex; gap: 2rem; font-size: 13px; letter-spacing: 2px; }
-    .nav-links a { color: var(--dark-dim); }
-
-    .hero { display: grid; grid-template-columns: 1fr 1fr; min-height: 460px; }
-    .hero-left { padding: 4.5rem 3rem; display: flex; flex-direction: column; justify-content: center; }
-    .hero-tag { font-size: 13px; letter-spacing: 4px; color: var(--dark-dim); text-transform: uppercase; margin-bottom: 1rem; }
-    .hero-title { font-family: var(--font-serif); font-size: 52px; font-weight: 300; line-height: 1.2; color: var(--dark-text); margin-bottom: 0.3rem; }
-    .hero-title em { color: var(--dark-soft); font-style: italic; }
-    .hero-zh { font-size: 16px; letter-spacing: 4px; color: var(--dark-dim); margin-bottom: 1.8rem; }
-    .hero-desc { font-size: 14px; line-height: 2; color: var(--dark-muted); margin-bottom: 2rem; max-width: 380px; }
-    .btn-p { display: inline-block; font-size: 12px; letter-spacing: 2px; background: rgba(155,110,255,0.13); border: 0.5px solid rgba(155,110,255,0.4); color: var(--dark-soft); padding: 12px 28px; border-radius: var(--radius-pill); text-transform: uppercase; margin-right: 1rem; }
-    .btn-s { font-size: 12px; letter-spacing: 2px; color: var(--dark-dim); text-transform: uppercase; }
-    .hero-right { background: #05030d; display: flex; align-items: center; justify-content: center; border-left: 0.5px solid var(--dark-border); }
-    .img-ph { width: 260px; height: 340px; border: 0.5px dashed var(--dark-dimmer); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; }
-    .img-ph span { font-size: 11px; letter-spacing: 1.5px; color: var(--dark-dim); text-align: center; line-height: 1.6; }
-
-    .divider { background: var(--dark-dimmer); }
-    .sec-label { color: var(--dark-dim); font-size: 12px; }
-    .sec-title { color: var(--dark-text); font-size: 32px; }
-    .sec-zh { color: var(--dark-dim); font-size: 14px; }
-    .cat-label-text { color: var(--dark-dim); font-size: 12px; }
-    .cat-line { background: var(--dark-border); }
-
-    .svc-grid { display: grid; gap: 1px; background: var(--dark-border); border: 0.5px solid var(--dark-border); border-radius: 10px; overflow: hidden; }
-    .g3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
-    .svc { padding: 2rem 1.8rem; background: var(--dark-card); text-align: center; transition: background 0.2s; }
-    .svc:hover { background: #130e22; }
-    .svc-name { font-family: var(--font-serif); font-size: 22px; color: var(--dark-soft); margin-bottom: 0.3rem; line-height: 1.3; }
-    .svc-name-zh { font-size: 13px; letter-spacing: 2px; color: var(--dark-dim); margin-bottom: 0.9rem; }
-    .svc-desc { font-size: 13px; line-height: 1.9; color: var(--dark-muted); margin-bottom: 1rem; }
-    .svc-price { font-size: 13px; color: var(--dark-dim); letter-spacing: 1px; margin-bottom: 1rem; }
-    .svc-link { display: inline-block; font-size: 11px; letter-spacing: 2px; color: rgba(155,110,255,0.55); border: 0.5px solid rgba(155,110,255,0.2); padding: 5px 14px; border-radius: var(--radius-pill); text-transform: uppercase; }
-    .badge-soon { color: rgba(180,140,255,0.45); border: 0.5px solid rgba(180,140,255,0.2); font-size: 10px; }
-    .svc.coming { opacity: 0.5; }
-
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--dark-border); margin: 0 2rem; border: 0.5px solid var(--dark-border); border-radius: var(--radius-md); overflow: hidden; }
-    .about-card { padding: 2.5rem; background: var(--dark-card); }
-    .about-img-ph { width: 80px; height: 80px; border: 0.5px dashed var(--dark-dimmer); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.2rem; }
-    .about-img-ph span { font-size: 9px; letter-spacing: 1px; color: var(--dark-dim); text-align: center; line-height: 1.4; }
-    .about-role { font-size: 11px; letter-spacing: 3px; color: var(--dark-dim); text-transform: uppercase; margin-bottom: 0.3rem; }
-    .about-name { font-family: var(--font-serif); font-size: 32px; font-weight: 300; color: var(--dark-text); margin-bottom: 0.15rem; }
-    .about-name em { color: var(--dark-soft); font-style: italic; }
-    .about-name-zh { font-size: 12px; letter-spacing: 3px; color: var(--dark-dim); margin-bottom: 1.2rem; }
-    .about-text { font-size: 13px; line-height: 2; color: var(--dark-muted); }
-    .about-text p { margin-bottom: 1rem; }
-    .about-text p:last-child { margin-bottom: 0; }
-
-    .notice { margin: 0 2rem; padding: 1.2rem 1.8rem; border: 0.5px solid rgba(180,140,255,0.15); border-radius: var(--radius-sm); background: rgba(155,110,255,0.05); font-size: 13px; color: var(--dark-muted); line-height: 1.9; }
-    .notice strong { color: rgba(200,170,255,0.6); font-weight: 500; }
-
-    .contact-section { margin: 0 2rem; padding: 2.5rem; background: var(--dark-mid); border: 0.5px solid var(--dark-border); border-radius: var(--radius-md); display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 2rem; }
-    .contact-col-title { font-size: 11px; letter-spacing: 3px; color: var(--dark-dim); text-transform: uppercase; margin-bottom: 1.2rem; }
-    .contact-item { font-size: 13px; color: var(--dark-muted); margin-bottom: 0.6rem; line-height: 1.8; }
-
-    .ig-section { text-align: center; padding: 3rem 2rem; }
-    .ig-handle { font-family: var(--font-serif); font-size: 26px; font-weight: 300; color: var(--dark-soft); margin: 0.6rem 0; }
-    .ig-desc { font-size: 14px; color: var(--dark-muted); line-height: 1.9; }
-    .ig-btn { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; letter-spacing: 2px; color: var(--dark-dim); border: 0.5px solid var(--dark-dimmer); padding: 12px 28px; border-radius: var(--radius-pill); text-transform: uppercase; margin-top: 1.2rem; }
-
-    .site-footer { border-top: 0.5px solid var(--dark-border); color: var(--dark-dim); font-size: 12px; }
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Montserrat:wght@300;400;500&display=swap');
+    *{box-sizing:border-box;margin:0;padding:0;}
+    :root{
+      --bg:#07050f;--card:#0e0a1a;--mid:#110d1f;
+      --soft:#c5a8ff;--dim:rgba(180,140,255,0.38);--dimmer:rgba(180,140,255,0.15);
+      --text:#e8deff;--muted:rgba(200,170,255,0.58);--faint:rgba(180,140,255,0.32);
+      --border:rgba(155,110,255,0.14);
+      --serif:'Cormorant Garamond',serif;--sans:'Montserrat',sans-serif;
+    }
+    body{font-family:var(--sans);background:var(--bg);color:var(--text);}
+    a{text-decoration:none;color:inherit;}
+    nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 2.5rem;border-bottom:0.5px solid var(--border);}
+    .nav-left{display:flex;align-items:center;gap:1.2rem;}
+    .nav-back{font-size:12px;letter-spacing:1.5px;color:rgba(197,168,255,0.6);}
+    .nav-logo-ph{width:52px;height:52px;border:0.5px dashed var(--dimmer);border-radius:8px;display:flex;align-items:center;justify-content:center;}
+    .nav-logo-ph span{font-size:8px;letter-spacing:1px;color:var(--faint);text-align:center;line-height:1.5;}
+    .nav-links{display:flex;align-items:center;gap:1.6rem;}
+    .nav-links a{font-size:13px;letter-spacing:1.5px;color:rgba(220,200,255,0.85);}
+    .nav-sep{width:0.5px;height:16px;background:rgba(155,110,255,0.2);}
+    .nav-book{color:var(--soft)!important;border:1px solid rgba(155,110,255,0.5)!important;padding:8px 20px;border-radius:24px;text-transform:uppercase;font-size:12px!important;letter-spacing:2px!important;}
+    .hero{display:grid;grid-template-columns:1fr 1fr;min-height:460px;}
+    .hero-left{padding:4.5rem 3rem;display:flex;flex-direction:column;justify-content:center;}
+    .hero-tag{font-size:13px;letter-spacing:4px;color:rgba(197,168,255,0.85);text-transform:uppercase;margin-bottom:1rem;font-weight:500;}
+    .hero-title{font-family:var(--serif);font-size:52px;font-weight:300;line-height:1.2;color:var(--text);margin-bottom:.2rem;}
+    .hero-title em{color:var(--soft);font-style:italic;}
+    .hero-zh{font-size:16px;letter-spacing:4px;color:var(--faint);margin-bottom:1.8rem;}
+    .hero-desc{font-size:14px;line-height:2;color:var(--muted);margin-bottom:2rem;max-width:380px;}
+    .btn-p{display:inline-block;font-size:12px;letter-spacing:2px;background:rgba(155,110,255,0.13);border:0.5px solid rgba(155,110,255,0.4);color:var(--soft);padding:12px 28px;border-radius:24px;text-transform:uppercase;margin-right:1rem;}
+    .btn-s{font-size:12px;letter-spacing:2px;color:var(--dim);text-transform:uppercase;}
+    .hero-right{background:#05030d;display:flex;align-items:center;justify-content:center;border-left:0.5px solid var(--border);}
+    .img-ph{width:260px;height:340px;border:0.5px dashed var(--dimmer);border-radius:8px;display:flex;align-items:center;justify-content:center;}
+    .img-ph span{font-size:11px;letter-spacing:1.5px;color:var(--faint);text-align:center;line-height:1.6;}
+    .divider{width:36px;height:0.5px;background:var(--dimmer);margin:2.8rem auto;}
+    .sec-label{text-align:center;font-size:12px;letter-spacing:5px;color:rgba(197,168,255,0.7);text-transform:uppercase;margin-bottom:.5rem;font-weight:500;}
+    .sec-title{text-align:center;font-family:var(--serif);font-size:32px;font-weight:300;color:var(--text);margin-bottom:.3rem;}
+    .sec-zh{text-align:center;font-size:14px;letter-spacing:3px;color:rgba(197,168,255,0.5);margin-bottom:2rem;}
+    .cat-wrap{margin:0 2rem 2rem;}
+    .cat-header{display:flex;align-items:center;gap:.8rem;margin-bottom:1rem;}
+    .cat-icon{font-size:16px;opacity:.8;}
+    .cat-label-text{font-size:13px;letter-spacing:3px;color:rgba(197,168,255,.9);text-transform:uppercase;font-weight:500;white-space:nowrap;}
+    .cat-line{flex:1;height:.5px;background:var(--border);}
+    .svc-grid{display:grid;gap:1px;background:var(--border);border:.5px solid var(--border);border-radius:10px;overflow:hidden;}
+    .g3{grid-template-columns:repeat(3,minmax(0,1fr));}
+    .svc{padding:2rem 1.8rem;background:var(--card);text-align:center;transition:background .2s;}
+    .svc:hover{background:#130e22;}
+    .svc.coming{opacity:.5;}
+    .svc-name{font-family:var(--serif);font-size:22px;color:var(--soft);margin-bottom:.3rem;line-height:1.3;}
+    .svc-name-zh{font-size:13px;letter-spacing:2px;color:var(--faint);margin-bottom:.9rem;}
+    .svc-desc{font-size:13px;line-height:1.9;color:var(--muted);margin-bottom:1rem;}
+    .svc-price-row{display:flex;align-items:center;justify-content:center;gap:.6rem;margin-bottom:1rem;flex-wrap:wrap;}
+    .svc-price{font-size:13px;color:var(--dim);letter-spacing:1px;}
+    .amelia-tag{font-size:10px;letter-spacing:1.5px;color:rgba(197,168,255,.55);background:rgba(155,110,255,.1);border:.5px solid rgba(155,110,255,.2);padding:2px 9px;border-radius:10px;}
+    .svc-link{display:inline-block;font-size:11px;letter-spacing:2px;color:rgba(155,110,255,.55);border:.5px solid rgba(155,110,255,.2);padding:5px 14px;border-radius:20px;text-transform:uppercase;}
+    .badge{display:inline-block;font-size:9px;letter-spacing:2px;color:rgba(180,140,255,.45);border:.5px solid rgba(180,140,255,.2);padding:3px 10px;border-radius:12px;text-transform:uppercase;margin-bottom:.6rem;}
+    .notice{margin:0 2rem;padding:1.2rem 1.8rem;border-left:2px solid rgba(155,110,255,.3);background:rgba(155,110,255,.05);font-size:13px;color:rgba(200,170,255,.65);line-height:1.9;border-radius:0 8px 8px 0;}
+    .notice strong{color:rgba(200,170,255,.75);font-weight:500;}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin:0 2rem;border:.5px solid var(--border);border-radius:12px;overflow:hidden;}
+    .about-card{padding:2.5rem;background:var(--card);}
+    .about-img-ph{width:76px;height:76px;border:.5px dashed var(--dimmer);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1.2rem;}
+    .about-img-ph span{font-size:8px;letter-spacing:1px;color:var(--faint);text-align:center;line-height:1.4;}
+    .about-role{font-size:10px;letter-spacing:3px;color:var(--faint);text-transform:uppercase;margin-bottom:.3rem;}
+    .about-name{font-family:var(--serif);font-size:28px;font-weight:300;color:var(--text);margin-bottom:.15rem;}
+    .about-name em{color:var(--soft);font-style:italic;}
+    .about-name-zh{font-size:11px;letter-spacing:3px;color:var(--faint);margin-bottom:1rem;}
+    .about-text{font-size:13px;line-height:2;color:var(--muted);}
+    .about-text p{margin-bottom:1rem;}
+    .about-text p:last-child{margin-bottom:0;}
+    .dm-btn{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:1.5px;color:var(--soft);border:.5px solid rgba(155,110,255,.45);padding:8px 18px;border-radius:20px;text-transform:uppercase;margin-top:1rem;}
+    .dm-btn i{font-size:14px;color:#E1306C;}
+    .ci{display:flex;align-items:center;gap:10px;font-size:13px;color:rgba(200,170,255,.7);margin-bottom:.65rem;line-height:1.6;}
+    .bi{width:20px;height:20px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+    .bi i{font-size:16px;}
+    .bi img{width:17px;height:17px;border-radius:4px;object-fit:cover;}
+    .fa-instagram{color:#E1306C;}.fa-facebook{color:#1877F2;}.fa-weixin{color:#07C160;}.fa-line{color:#06C755;}.fa-envelope{color:var(--soft);}
+    .follow-block{background:var(--card);border:.5px solid var(--border);border-radius:12px;overflow:hidden;}
+    .follow-grid{display:grid;grid-template-columns:2fr 1.2fr 1fr;gap:1px;background:var(--border);}
+    .follow-col{padding:1.8rem 2rem;background:var(--card);}
+    .follow-col.social-col{background:#0a0718;}
+    .follow-col.book-col{background:#080514;display:flex;flex-direction:column;justify-content:center;}
+    .col-title{font-size:10px;letter-spacing:3px;color:var(--faint);text-transform:uppercase;margin-bottom:1rem;font-weight:500;}
+    .contact-sub-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 1.5rem;}
+    .sub-label{font-size:10px;letter-spacing:2px;color:rgba(197,168,255,.35);text-transform:uppercase;margin-bottom:.6rem;display:block;}
+    .si{display:flex;align-items:center;gap:10px;font-size:12px;color:rgba(200,170,255,.6);margin-bottom:.6rem;}
+    .book-label{font-size:10px;letter-spacing:3px;color:var(--faint);text-transform:uppercase;margin-bottom:.8rem;}
+    .book-desc{font-size:12px;color:var(--muted);line-height:1.8;margin-bottom:1.2rem;}
+    .book-btn{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:2px;color:var(--soft);border:1px solid rgba(155,110,255,.45);padding:10px 20px;border-radius:20px;text-transform:uppercase;}
+    .book-btn i{font-size:14px;color:#E1306C;}
+    footer{text-align:center;padding:1.8rem;border-top:.5px solid var(--border);font-size:12px;letter-spacing:2px;color:var(--faint);}
   </style>
 </head>
 <body>
 
-  <nav class="nav">
+<nav>
+  <div class="nav-left">
     <a class="nav-back" href="../">← K Miracle Custom Services</a>
     <div class="nav-logo-ph"><span>YOUR<br>LOGO</span></div>
-    <div class="nav-links">
-      <a href="#services">Services 服務</a>
-      <a href="#about">About 關於</a>
-      <a href="#book">Book 預約</a>
-      <a href="#">EN | 中文</a>
+  </div>
+  <div class="nav-links">
+    <a href="index.html">Home 主頁</a>
+    <a href="#about">About 關於</a>
+    <div class="nav-sep"></div>
+    <a href="#services">Services 服務</a>
+    <a href="#">Shop 商店</a>
+    <a href="#">Blog 博客</a>
+    <div class="nav-sep"></div>
+    <a class="nav-book" href="https://www.instagram.com/KMC_Mystic" target="_blank">Book Now 預約</a>
+  </div>
+</nav>
+
+<main>
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-tag">KMC Mystic by Kyra</div>
+      <h1 class="hero-title">Ancient arts.<br><em>Modern souls.</em><br>East meets West.</h1>
+      <div class="hero-zh">古老藝術 · 現代靈魂 · 中西匯聚</div>
+      <p class="hero-desc">融合東西方玄學傳統，透過占卜、占星、療愈與魔法儀式，協助您在迷惘之際重獲清晰，找到屬於自己的方向。<br><br>Drawing from both Eastern and Western traditions — divination, astrology, healing and ritual magic — to help you find clarity when you need it most.</p>
+      <div>
+        <a class="btn-p" href="https://www.instagram.com/KMC_Mystic" target="_blank">預約 Book a Session</a>
+        <a class="btn-s" href="#services">Services →</a>
+      </div>
     </div>
-  </nav>
+    <div class="hero-right">
+      <div class="img-ph"><span>YOUR<br>HERO<br>PHOTO</span></div>
+    </div>
+  </section>
 
-  <main>
-    <section class="hero">
-      <div class="hero-left">
-        <div class="hero-tag">KMC Mystic by Kyra</div>
-        <h1 class="hero-title">Ancient arts.<br><em>Modern souls.</em><br>East meets West.</h1>
-        <div class="hero-zh">古老藝術 · 現代靈魂 · 中西匯聚</div>
-        <p class="hero-desc">
-          融合東西方玄學傳統，透過占卜、占星、療愈與魔法儀式，協助您在迷惘之際重獲清晰，找到屬於自己的方向。<br><br>
-          Drawing from both Eastern and Western traditions — divination, astrology, healing and ritual magic — to help you find clarity when you need it most.
-        </p>
-        <div>
-          <a class="btn-p" href="https://www.instagram.com/KMC_Mystic" target="_blank">預約 Book a Session</a>
-          <a class="btn-s" href="#services">Services →</a>
+  <div class="divider"></div>
+
+  <section id="services">
+    <div class="sec-label">What we offer</div>
+    <div class="sec-title">Services 服務</div>
+    <div class="sec-zh">卜卦 · 占星 · 魔法儀式 · 療愈</div>
+
+    <div class="cat-wrap">
+      <div class="cat-header"><span class="cat-icon">🃏</span><span class="cat-label-text">Divination 卜卦</span><div class="cat-line"></div></div>
+      <div class="svc-grid g3">
+        <div class="svc">
+          <div class="svc-name">Tarot</div><div class="svc-name-zh">塔羅占卜</div>
+          <p class="svc-desc">塔羅並非預言未來，而是幫助您看清當下的處境與內心深處已知的答案。適用於感情、事業及人生方向。<br><br>Tarot helps you see clearly — not predict the future, but illuminate what's already there.</p>
+          <div class="svc-price-row"><span class="svc-price">DM to enquire</span></div>
+          <a class="svc-link" href="tarot.html">了解更多 Learn more →</a>
         </div>
-      </div>
-      <div class="hero-right">
-        <div class="img-ph"><span>YOUR<br>HERO<br>PHOTO</span></div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <section id="services">
-      <div class="sec-label">What we offer</div>
-      <div class="sec-title">Services 服務</div>
-      <div class="sec-zh">卜卦 · 占星 · 魔法儀式 · 療愈</div>
-
-      <div class="cat-wrap">
-        <div class="cat-header">
-          <span class="cat-icon">🃏</span>
-          <span class="cat-label-text">Divination 卜卦</span>
-          <div class="cat-line"></div>
+        <div class="svc">
+          <div class="svc-name">Lenormand</div><div class="svc-name-zh">雷諾曼</div>
+          <div class="badge">Coming Soon</div>
+          <p class="svc-desc">較塔羅更為直接、具體的占卜系統，以精準務實見稱，適合尋求明確答案的提問。<br><br>More direct and concrete than tarot — known for precision when you need a clear answer.</p>
+          <div class="svc-price-row"><span class="svc-price">DM to enquire</span></div>
         </div>
-        <div class="svc-grid g3">
-          <div class="svc">
-            <div class="svc-name">Tarot</div>
-            <div class="svc-name-zh">塔羅占卜</div>
-            <p class="svc-desc">塔羅並非預言未來，而是幫助您看清當下的處境與內心深處已知的答案。適用於感情、事業及人生方向。<br><br>Tarot helps you see clearly — not predict the future, but illuminate what's already there.</p>
-            <div class="svc-price">DM to enquire</div>
-            <a class="svc-link" href="tarot.html">了解更多 Learn more →</a>
-          </div>
-          <div class="svc">
-            <div class="svc-name">Lenormand</div>
-            <div class="svc-name-zh">盧諾牌</div>
-            <div class="badge badge-soon">Coming Soon</div>
-            <p class="svc-desc">較塔羅更為直接、具體的占卜系統，以精準務實見稱，適合尋求明確答案的提問。<br><br>More direct and concrete than tarot — known for precision when you need a clear answer.</p>
-            <div class="svc-price">DM to enquire</div>
-          </div>
-          <div class="svc">
-            <div class="svc-name">小六壬</div>
-            <div class="svc-name-zh">Eastern Divination</div>
-            <p class="svc-desc">中國傳統占卜術，無需生辰八字，以問題浮現之時起卦，快速準確。<br><br>A traditional Chinese divination method — no birth date needed, fast and accurate.</p>
-            <div class="svc-price">DM to enquire</div>
-            <a class="svc-link" href="liu-ren.html">了解更多 Learn more →</a>
-          </div>
+        <div class="svc">
+          <div class="svc-name">小六壬</div><div class="svc-name-zh">Eastern Divination</div>
+          <p class="svc-desc">中國傳統占卜術，無需生辰八字，以問題浮現之時起卦，快速準確。<br><br>A traditional Chinese divination method — no birth date needed, fast and accurate.</p>
+          <div class="svc-price-row"><span class="svc-price">DM to enquire</span></div>
+          <a class="svc-link" href="liu-ren.html">了解更多 Learn more →</a>
         </div>
-      </div>
-
-      <div class="cat-wrap">
-        <div class="cat-header">
-          <span class="cat-icon">⭐</span>
-          <span class="cat-label-text">Astrology 占星</span>
-          <div class="cat-line"></div>
-        </div>
-        <div class="svc-grid g3">
-          <div class="svc">
-            <div class="svc-name">Horary Astrology</div>
-            <div class="svc-name-zh">卜卦占星</div>
-            <p class="svc-desc">以提問當下的時刻起盤，無需出生資料，針對單一問題給予全面解答。每位客人限問一題。<br><br>A chart cast at the exact moment you ask. No birth data required. One question per client.</p>
-            <div class="svc-price">AU$38 · 一客一問</div>
-            <a class="svc-link" href="horary.html">了解更多 Learn more →</a>
-          </div>
-          <div class="svc">
-            <div class="svc-name">Classical Astrology<br>Natal Chart</div>
-            <div class="svc-name-zh">古典占星 · 本命盤</div>
-            <p class="svc-desc">採用古典占星（有別於現代占星及印度占星），深入解讀您天生的性格特質、人生主題與命運走向。<br><br>Classical Western astrology — distinct from modern or Vedic. A thorough reading of your natal chart.</p>
-            <div class="svc-price">DM to enquire</div>
-            <a class="svc-link" href="natal.html">了解更多 Learn more →</a>
-          </div>
-          <div class="svc coming">
-            <div class="badge badge-soon">Coming Soon</div>
-            <div class="svc-name">Classical Astrology<br>Solar Return</div>
-            <div class="svc-name-zh">古典占星 · 流年盤</div>
-            <p class="svc-desc">古典占星流年盤，解讀當年的運勢走向與重點發展方向。<br><br>Classical solar return reading — what the year ahead holds.</p>
-            <div class="svc-price">DM to enquire</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="cat-wrap">
-        <div class="cat-header">
-          <span class="cat-icon">🕯</span>
-          <span class="cat-label-text">Ritual Magic 魔法儀式</span>
-          <div class="cat-line"></div>
-        </div>
-        <div class="svc-grid g3">
-          <div class="svc">
-            <div class="svc-name">Nordic Witchcraft</div>
-            <div class="svc-name-zh">北歐古典巫術</div>
-            <p class="svc-desc">以盧恩符文、儀式典禮及北歐魔法傳統為核心，根植於古老術法，而非形式上的展示。<br><br>Rooted in runes, ceremonial ritual and Norse magical tradition — the genuine practice.</p>
-            <div class="svc-price">DM to enquire</div>
-            <a class="svc-link" href="nordic.html">了解更多 Learn more →</a>
-          </div>
-          <div class="svc">
-            <div class="svc-name">PGM Magic</div>
-            <div class="svc-name-zh">古希臘魔法</div>
-            <p class="svc-desc">以古希臘魔法紙草文獻（PGM）為基礎，結合占星時機與振動頻率，達至即時顯化。<br><br>Based on the Greek Magical Papyri — combining astrological timing with vibrational frequency.</p>
-            <div class="svc-price">DM to enquire</div>
-            <a class="svc-link" href="pgm.html">了解更多 Learn more →</a>
-          </div>
-          <div class="svc">
-            <div class="svc-name">Wicca</div>
-            <div class="svc-name-zh">威卡巫術</div>
-            <p class="svc-desc">提供儀式預約，亦可訂製魔法產品，包括精油、蠟燭及法術瓶等，將魔法力量融入日常生活。<br><br>Ritual sessions plus custom magical products — oils, candles and spell bottles.</p>
-            <div class="svc-price">DM to enquire</div>
-            <a class="svc-link" href="wicca.html">了解更多 Learn more →</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="cat-wrap">
-        <div class="cat-header">
-          <span class="cat-icon">✨</span>
-          <span class="cat-label-text">Healing 療愈</span>
-          <div class="cat-line"></div>
-        </div>
-        <div class="svc-grid g3">
-          <div class="svc">
-            <div class="svc-name">Reiki Healing</div>
-            <div class="svc-name-zh">靈氣療愈</div>
-            <p class="svc-desc">透過宇宙生命能量的傳導，平衡身心能量，舒緩壓力與情緒困擾，恢復內在活力。不涉及任何宗教。<br><br>Channelling universal life energy to restore balance in body and mind. No religious association.</p>
-            <div class="svc-price">DM to enquire</div>
-            <a class="svc-link" href="reiki.html">了解更多 Learn more →</a>
-          </div>
-          <div class="svc">
-            <div class="svc-name">SRT</div>
-            <div class="svc-name-zh">靈性回應療法</div>
-            <p class="svc-desc">運用靈擺清除潛意識中的負面程式與能量阻塞，協助提升個人振動頻率。<br><br>Pendulum work to identify and clear negative subconscious programming and energy blockages.</p>
-            <div class="svc-price">DM to enquire</div>
-            <a class="svc-link" href="srt.html">了解更多 Learn more →</a>
-          </div>
-          <div class="svc">
-            <div class="svc-name">Akashic Records</div>
-            <div class="svc-name-zh">阿卡西紀錄</div>
-            <p class="svc-desc">進入靈魂層面的紀錄庫，了解人生中重複出現的模式與課題，從根源處理問題。<br><br>Access your soul's records to understand recurring patterns and life themes at their source.</p>
-            <div class="svc-price">DM to enquire</div>
-            <a class="svc-link" href="akashic.html">了解更多 Learn more →</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="notice">
-        <strong>請注意 Please note —</strong> 所有玄學及療愈服務均不能取代正規醫療或心理治療。如有健康或情緒問題，請先諮詢專業醫護人員。<br>
-        All metaphysical and healing services are not a substitute for medical or psychological treatment. Please consult a qualified professional if you have health concerns.
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <section id="about">
-      <div class="sec-label">The practitioners</div>
-      <div class="sec-title">Meet the team 認識我們</div>
-      <div class="sec-zh">Kyra · Amelia</div>
-      <div class="about-grid">
-        <div class="about-card">
-          <div class="about-img-ph"><span>KYRA</span></div>
-          <div class="about-role">Founder · Practitioner</div>
-          <div class="about-name"><em>Kyra</em></div>
-          <div class="about-name-zh">創辦人 · 玄學師</div>
-          <div class="about-text">
-            <p>現居澳洲布里斯班，正職為會計師，同時從事美甲藝術。擅長以冷靜邏輯分析問題，然而天生敏銳的感知力使其分析從不止於理性，直覺始終是判斷的一部分。</p>
-            <p>Based in Brisbane, Australia. An accountant and nail artist by trade — analytical and grounded by nature, but with an intuitive sensitivity that has always informed the work.</p>
-            <p>多年深研占卜、占星、靈氣療愈及巫術，橫跨西方神秘學與東方玄學。每位客人的情況各有不同，服務因人而異，沒有固定公式。</p>
-            <p>Years of dedicated study across divination, astrology, healing and magic — both Eastern and Western. Every session is tailored; there is no one-size-fits-all approach.</p>
-          </div>
-        </div>
-        <div class="about-card">
-          <div class="about-img-ph"><span>AMELIA</span></div>
-          <div class="about-role">Practitioner</div>
-          <div class="about-name"><em>Amelia</em></div>
-          <div class="about-name-zh">玄學師</div>
-          <div class="about-text" style="color:rgba(200,170,255,0.28);font-style:italic;">
-            <p>Amelia 的個人介紹即將加入。</p>
-            <p>Amelia's introduction coming soon.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <div class="contact-section">
-      <div>
-        <div class="contact-col-title">Contact 聯絡方式</div>
-        <div class="contact-item">Email: Kyra@kmcservices.com.au</div>
-        <div class="contact-item">WeChat: lmkkkkkkkk_</div>
-        <div class="contact-item">LINE: KMSAU</div>
-      </div>
-      <div>
-        <div class="contact-col-title">Social 社交媒體</div>
-        <div class="contact-item">Instagram: @KyraMystica.KMS</div>
-        <div class="contact-item">小紅書: kyra_mystica</div>
-        <div class="contact-item">Facebook: K Miracle Studio</div>
-      </div>
-      <div>
-        <div class="contact-col-title">Book 預約</div>
-        <div class="contact-item">歡迎透過 Instagram 私訊或以上任何方式聯絡預約。<br><br>Send a DM on Instagram or reach out via any of the contacts above.</div>
       </div>
     </div>
 
-    <section id="book" class="ig-section">
-      <div class="sec-label">Ready to begin?</div>
-      <div class="ig-handle">@KMC_Mystic</div>
-      <p class="ig-desc">Instagram 私訊預約 · Book via Instagram DM</p>
-      <a class="ig-btn" href="https://www.instagram.com/KMC_Mystic" target="_blank">Book on Instagram →</a>
-    </section>
-  </main>
+    <div class="cat-wrap">
+      <div class="cat-header"><span class="cat-icon">⭐</span><span class="cat-label-text">Astrology 占星</span><div class="cat-line"></div></div>
+      <div class="svc-grid g3">
+        <div class="svc">
+          <div class="svc-name">Horary Astrology</div><div class="svc-name-zh">卜卦占星</div>
+          <p class="svc-desc">以提問當下的時刻起盤，無需出生資料，借助宇宙的啟示給予解答。每一事項限問一次。<br><br>A chart cast at the exact moment your question arises. No birth data required — the cosmos provides the answer. One question per matter.</p>
+          <div class="svc-price-row"><span class="svc-price">AU$38 · 一事一問</span></div>
+          <a class="svc-link" href="horary.html">了解更多 Learn more →</a>
+        </div>
+        <div class="svc">
+          <div class="svc-name">Birth Horoscope<br>Analysis</div><div class="svc-name-zh">古典占星 · 個人星盤分析</div>
+          <p class="svc-desc">採用古典占星（有別於現代占星及印度占星），深入解讀您天生的性格特質、人生主題與命運走向。<br><br>Classical Western astrology — distinct from modern or Vedic. A thorough reading of your natal chart.</p>
+          <div class="svc-price-row"><span class="svc-price">DM to enquire</span></div>
+          <a class="svc-link" href="natal.html">了解更多 Learn more →</a>
+        </div>
+        <div class="svc coming">
+          <div class="badge">Coming Soon</div>
+          <div class="svc-name">Yearly Horoscope<br>Analysis</div><div class="svc-name-zh">古典占星 · 流年運程分析</div>
+          <p class="svc-desc">古典占星流年盤，解讀當年的運勢走向與重點發展方向。<br><br>Classical solar return reading — what the year ahead holds.</p>
+          <div class="svc-price-row"><span class="svc-price">DM to enquire</span></div>
+        </div>
+      </div>
+    </div>
 
-  <footer class="site-footer">
-    <div>© 2025 KMC Mystic by Kyra · K Miracle Custom Services · kmcservices.com.au</div>
-  </footer>
+    <div class="cat-wrap">
+      <div class="cat-header"><span class="cat-icon">🕯</span><span class="cat-label-text">Ritual Magic 魔法儀式</span><div class="cat-line"></div></div>
+      <div class="svc-grid g3">
+        <div class="svc">
+          <div class="svc-name">Nordic Witchcraft</div><div class="svc-name-zh">北歐古典巫術</div>
+          <p class="svc-desc">以盧恩符文、儀式典禮及北歐魔法傳統為核心，根植於古老術法，而非形式上的展示。<br><br>Rooted in runes, ceremonial ritual and Norse magical tradition — the genuine practice.</p>
+          <div class="svc-price-row"><span class="svc-price">DM to enquire</span></div>
+          <a class="svc-link" href="nordic.html">了解更多 Learn more →</a>
+        </div>
+        <div class="svc">
+          <div class="svc-name">PGM Magic</div><div class="svc-name-zh">古希臘魔法</div>
+          <p class="svc-desc">以古希臘魔法紙草文獻（PGM）為基礎，結合占星時機與振動頻率，達至即時顯化。<br><br>Based on the Greek Magical Papyri — combining astrological timing with vibrational frequency.</p>
+          <div class="svc-price-row"><span class="svc-price">DM to enquire</span></div>
+          <a class="svc-link" href="pgm.html">了解更多 Learn more →</a>
+        </div>
+        <div class="svc">
+          <div class="svc-name">Wicca</div><div class="svc-name-zh">威卡巫術</div>
+          <p class="svc-desc">提供儀式預約，亦可訂製魔法產品，包括精油、蠟燭及法術瓶等，將魔法力量融入日常生活。<br><br>Ritual sessions plus custom magical products — oils, candles and spell bottles.</p>
+          <div class="svc-price-row"><span class="svc-price">DM to enquire</span></div>
+          <a class="svc-link" href="wicca.html">了解更多 Learn more →</a>
+        </div>
+      </div>
+    </div>
 
+    <div class="cat-wrap">
+      <div class="cat-header"><span class="cat-icon">✨</span><span class="cat-label-text">Healing 療愈</span><div class="cat-line"></div></div>
+      <div class="svc-grid g3">
+        <div class="svc">
+          <div class="svc-name">Reiki Healing</div><div class="svc-name-zh">靈氣療愈</div>
+          <p class="svc-desc">透過宇宙生命能量的傳導，平衡身心能量，舒緩壓力與情緒困擾，恢復內在活力。不涉及任何宗教。<br><br>Channelling universal life energy to restore balance in body and mind. No religious association.</p>
+          <div class="svc-price-row"><span class="svc-price">DM to enquire</span><span class="amelia-tag">Amelia 提供</span></div>
+          <a class="svc-link" href="reiki.html">了解更多 Learn more →</a>
+        </div>
+        <div class="svc">
+          <div class="svc-name">Pendulum Therapy</div><div class="svc-name-zh">靈擺意識療法</div>
+          <p class="svc-desc">運用靈擺清除潛意識中的負面程式與能量阻塞，協助提升個人振動頻率，重整生命能量場。包含 SRT 靈性回應療法。<br><br>Pendulum work to clear negative subconscious programming and energy blockages. Includes SRT.</p>
+          <div class="svc-price-row"><span class="svc-price">DM to enquire</span><span class="amelia-tag">Amelia 提供</span></div>
+          <a class="svc-link" href="pendulum.html">了解更多 Learn more →</a>
+        </div>
+        <div class="svc">
+          <div class="svc-name">Theta Healing</div><div class="svc-name-zh">希塔療癒</div>
+          <p class="svc-desc">透過清理限制性信念，協助您在深層意識中重建正面的生命模式，改善各方面的生活質素。<br><br>Clearing limiting beliefs at a subconscious level to create positive life patterns across all areas of wellbeing.</p>
+          <div class="svc-price-row"><span class="svc-price">DM to enquire</span><span class="amelia-tag">Amelia 提供</span></div>
+          <a class="svc-link" href="theta.html">了解更多 Learn more →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="notice" style="margin-bottom:2rem;">
+      <strong>請注意 —</strong> 所有玄學及療愈服務均不能取代正規醫療或心理治療。如有健康或情緒問題，請先諮詢專業醫護人員。<br>
+      <strong>Please note —</strong> All metaphysical and healing services are not a substitute for medical or psychological treatment. Please consult a qualified professional if you have health concerns.
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="about">
+    <div class="sec-label">The practitioners</div>
+    <div class="sec-title">Meet the team 認識我們</div>
+    <div class="sec-zh">Kyra · Amelia</div>
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="about-img-ph"><span>KYRA</span></div>
+        <div class="about-role">Founder · Practitioner</div>
+        <div class="about-name"><em>Kyra</em></div>
+        <div class="about-name-zh">創辦人 · 玄學師</div>
+        <div class="about-text">
+          <p>現居澳洲布里斯班，正職為會計師，同時從事美甲藝術。擅長以冷靜邏輯分析問題，然而天生敏銳的感知力使其分析從不止於理性，直覺始終是判斷的一部分。</p>
+          <p>Based in Brisbane, Australia. An accountant and nail artist by trade — analytical and grounded by nature, but with an intuitive sensitivity that has always informed the work.</p>
+          <p>多年深研占卜、占星及巫術，橫跨西方神秘學與東方玄學。每位客人的情況各有不同，服務因人而異，沒有固定公式。</p>
+          <p>Years of dedicated study across divination, astrology and magic — both Eastern and Western. Every session is tailored; there is no one-size-fits-all approach.</p>
+        </div>
+        <a class="dm-btn" href="https://www.instagram.com/kmc_mystic/" target="_blank"><i class="fa-brands fa-instagram"></i>DM Kyra via Instagram</a>
+      </div>
+      <div class="about-card">
+        <div class="about-img-ph"><span>AMELIA</span></div>
+        <div class="about-role">Practitioner</div>
+        <div class="about-name"><em>Amelia</em></div>
+        <div class="about-name-zh">玄學師</div>
+        <div class="about-text">
+          <p style="color:rgba(200,170,255,0.28);font-style:italic;">Amelia 的個人介紹即將加入。</p>
+          <p style="color:rgba(200,170,255,0.28);font-style:italic;">Amelia's introduction coming soon.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <div style="padding:0 2rem;">
+    <div class="sec-label">Connect with us</div>
+    <div class="sec-title">Follow Us</div>
+    <div class="sec-zh">聯繫我們</div>
+  </div>
+  <div style="margin:0 2rem 2rem;">
+    <div class="follow-block">
+      <div class="follow-grid">
+        <div class="follow-col">
+          <div class="col-title">Contact 聯絡方式</div>
+          <div class="contact-sub-grid">
+            <div>
+              <span class="sub-label">Kyra</span>
+              <a class="ci" href="mailto:Kyra@kmcservices.com.au"><span class="bi"><i class="fa-solid fa-envelope"></i></span>Kyra@kmcservices.com.au</a>
+              <div class="ci"><span class="bi"><i class="fa-brands fa-weixin"></i></span>WeChat: KMC_Mystic</div>
+              <a class="ci" href="https://www.instagram.com/kmc_mystic/" target="_blank"><span class="bi"><i class="fa-brands fa-instagram"></i></span>@kmc_mystic</a>
+            </div>
+            <div>
+              <span class="sub-label">Amelia</span>
+              <div class="ci"><span class="bi"><i class="fa-brands fa-weixin"></i></span>ameliamiao37</div>
+              <a class="ci" href="https://line.me/ti/p/J6MpvJ4Krr" target="_blank"><span class="bi"><i class="fa-brands fa-line"></i></span>LINE</a>
+              <a class="ci" href="https://www.instagram.com/ameliaandjewelry/" target="_blank"><span class="bi"><i class="fa-brands fa-instagram"></i></span>@ameliaandjewelry</a>
+            </div>
+          </div>
+        </div>
+        <div class="follow-col social-col">
+          <div class="col-title">Social 社交媒體</div>
+          <span class="sub-label">Kyra</span>
+          <a class="si" href="https://www.xiaohongshu.com" target="_blank"><span class="bi"><img src="xiaohongshu.png" alt="小紅書" style="width:17px;height:17px;border-radius:4px;"/></span>kyra_mystica</a>
+          <span class="sub-label" style="margin-top:.5rem;">Amelia</span>
+          <a class="si" href="#" target="_blank"><span class="bi"><img src="xiaohongshu.png" alt="小紅書" style="width:17px;height:17px;border-radius:4px;"/></span>ameliajewelry</a>
+          <span class="sub-label" style="margin-top:.5rem;">KMC Mystic</span>
+          <a class="si" href="https://www.facebook.com/KMCMystic/" target="_blank"><span class="bi"><i class="fa-brands fa-facebook"></i></span>KMC Mystic by Kyra</a>
+          <div class="si"><span class="bi"><i class="fa-brands fa-weixin"></i></span>公眾號: KMC Mystic</div>
+        </div>
+        <div class="follow-col book-col">
+          <div class="book-label">Book 預約</div>
+          <div class="book-desc">歡迎透過 Instagram 私訊或以上任何方式聯絡預約。<br><br>Send a DM on Instagram or reach out via any contact above.</div>
+          <a class="book-btn" href="https://www.instagram.com/KMC_Mystic" target="_blank"><i class="fa-brands fa-instagram"></i>Book Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>© 2025 KMC Mystic by Kyra · K Miracle Custom Services · kmcservices.com.au</footer>
 </body>
 </html>

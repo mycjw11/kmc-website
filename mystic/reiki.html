@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reiki Healing 靈氣療愈 | KMC Mystic by Kyra</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Montserrat:wght@300;400;500&display=swap');
+    *{box-sizing:border-box;margin:0;padding:0;}
+    :root{--bg:#07050f;--card:#0e0a1a;--soft:#c5a8ff;--dim:rgba(180,140,255,0.38);--dimmer:rgba(180,140,255,0.15);--text:#e8deff;--muted:rgba(200,170,255,0.58);--faint:rgba(180,140,255,0.32);--border:rgba(155,110,255,0.14);--serif:'Cormorant Garamond',serif;--sans:'Montserrat',sans-serif;}
+    body{font-family:var(--sans);background:var(--bg);color:var(--text);}
+    a{text-decoration:none;color:inherit;}
+    nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 2.5rem;border-bottom:0.5px solid var(--border);}
+    .nav-logo-ph{width:52px;height:52px;border:0.5px dashed var(--dimmer);border-radius:8px;display:flex;align-items:center;justify-content:center;}
+    .nav-logo-ph span{font-size:8px;letter-spacing:1px;color:var(--faint);text-align:center;line-height:1.5;}
+    .nav-links{display:flex;align-items:center;gap:1.6rem;}
+    .nav-links a{font-size:13px;letter-spacing:1.5px;color:rgba(220,200,255,0.85);}
+    .nav-sep{width:0.5px;height:16px;background:rgba(155,110,255,0.2);}
+    .nav-book{color:var(--soft)!important;border:1px solid rgba(155,110,255,0.5)!important;padding:8px 20px;border-radius:24px;text-transform:uppercase;font-size:12px!important;letter-spacing:2px!important;}
+    .divider{width:36px;height:0.5px;background:var(--dimmer);margin:2.8rem auto;}
+    .sec-label{text-align:center;font-size:12px;letter-spacing:5px;color:rgba(197,168,255,0.7);text-transform:uppercase;margin-bottom:.5rem;font-weight:500;}
+    .sec-title{text-align:center;font-family:var(--serif);font-size:32px;font-weight:300;color:var(--text);margin-bottom:.3rem;}
+    .sec-zh{text-align:center;font-size:14px;letter-spacing:3px;color:rgba(197,168,255,0.5);margin-bottom:2rem;}
+    .notice{margin:0 2rem 2rem;padding:1.2rem 1.8rem;border-left:2px solid rgba(155,110,255,.3);background:rgba(155,110,255,.05);font-size:13px;color:rgba(200,170,255,.65);line-height:1.9;border-radius:0 8px 8px 0;}
+    .notice strong{color:rgba(200,170,255,.75);font-weight:500;}
+    .ci{display:flex;align-items:center;gap:10px;font-size:13px;color:rgba(200,170,255,.7);margin-bottom:.65rem;line-height:1.6;}
+    .bi{width:20px;height:20px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+    .bi i{font-size:16px;}
+    .bi img{width:17px;height:17px;border-radius:4px;object-fit:cover;}
+    .fa-instagram{color:#E1306C;}.fa-facebook{color:#1877F2;}.fa-weixin{color:#07C160;}.fa-line{color:#06C755;}.fa-envelope{color:var(--soft);}
+    .follow-block{background:var(--card);border:.5px solid var(--border);border-radius:12px;overflow:hidden;}
+    .follow-grid{display:grid;grid-template-columns:2fr 1.2fr 1fr;gap:1px;background:var(--border);}
+    .follow-col{padding:1.8rem 2rem;background:var(--card);}
+    .follow-col.social-col{background:#0a0718;}
+    .follow-col.book-col{background:#080514;display:flex;flex-direction:column;justify-content:center;}
+    .col-title{font-size:10px;letter-spacing:3px;color:var(--faint);text-transform:uppercase;margin-bottom:1rem;font-weight:500;}
+    .contact-sub-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 1.5rem;}
+    .sub-label{font-size:10px;letter-spacing:2px;color:rgba(197,168,255,.35);text-transform:uppercase;margin-bottom:.6rem;display:block;}
+    .si{display:flex;align-items:center;gap:10px;font-size:12px;color:rgba(200,170,255,.6);margin-bottom:.6rem;}
+    .book-label{font-size:10px;letter-spacing:3px;color:var(--faint);text-transform:uppercase;margin-bottom:.8rem;}
+    .book-desc{font-size:12px;color:var(--muted);line-height:1.8;margin-bottom:1.2rem;}
+    .book-btn{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:2px;color:var(--soft);border:1px solid rgba(155,110,255,.45);padding:10px 20px;border-radius:20px;text-transform:uppercase;}
+    .book-btn i{font-size:14px;color:#E1306C;}
+    footer{text-align:center;padding:1.8rem;border-top:.5px solid var(--border);font-size:12px;letter-spacing:2px;color:var(--faint);}
+
+    /* PAGE SPECIFIC */
+    .hero-sub{padding:4rem 3rem 2rem;}
+    .breadcrumb{font-size:12px;letter-spacing:2px;color:var(--faint);margin-bottom:1rem;}
+    .breadcrumb a{color:rgba(197,168,255,0.5);}
+    .breadcrumb a:hover{color:var(--soft);}
+    .hero-tag{font-size:13px;letter-spacing:4px;color:rgba(197,168,255,0.85);text-transform:uppercase;margin-bottom:.8rem;font-weight:500;}
+    .hero-title{font-family:var(--serif);font-size:48px;font-weight:300;line-height:1.2;color:var(--text);margin-bottom:.2rem;}
+    .hero-title em{color:var(--soft);font-style:italic;}
+    .hero-zh{font-size:15px;letter-spacing:4px;color:var(--faint);margin-bottom:1.4rem;}
+    .amelia-credit{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:1.5px;color:rgba(197,168,255,.65);background:rgba(155,110,255,.08);border:.5px solid rgba(155,110,255,.2);padding:7px 18px;border-radius:20px;margin-bottom:1.5rem;}
+    .amelia-credit i{font-size:13px;color:#E1306C;}
+    .hero-desc{font-size:14px;line-height:2;color:var(--muted);max-width:700px;margin-bottom:2rem;}
+    .price-section{margin:0 2rem 3rem;}
+    .price-block{background:var(--card);border:.5px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:1.5rem;}
+    .price-block-header{padding:1.5rem 2rem;border-bottom:.5px solid var(--border);}
+    .price-block-title{font-family:var(--serif);font-size:24px;color:var(--soft);margin-bottom:.2rem;}
+    .price-block-zh{font-size:12px;letter-spacing:2px;color:var(--faint);}
+    .price-block-desc{font-size:13px;line-height:1.9;color:var(--muted);margin-top:.8rem;}
+    .price-table{width:100%;border-collapse:collapse;padding:0 2rem;}
+    .price-row{display:flex;justify-content:space-between;align-items:flex-start;padding:1rem 2rem;border-bottom:.5px solid rgba(155,110,255,.08);}
+    .price-row:last-child{border-bottom:none;}
+    .price-row-name{font-size:14px;color:var(--text);flex:1;padding-right:1rem;line-height:1.6;}
+    .price-row-sub{font-size:12px;color:var(--faint);display:block;margin-top:.2rem;}
+    .price-row-price{font-size:14px;color:var(--dim);white-space:nowrap;text-align:right;}
+    .price-note{font-size:12px;color:var(--faint);text-align:center;padding:1rem 2rem;font-style:italic;border-top:.5px solid rgba(155,110,255,.08);}
+    .currency-note{font-size:11px;letter-spacing:2px;color:rgba(197,168,255,.4);text-align:center;margin:0 2rem 1rem;text-transform:uppercase;}
+    .animal-note{margin:0 2rem;padding:1rem 1.5rem;background:rgba(155,110,255,.05);border:.5px solid rgba(155,110,255,.15);border-radius:8px;font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:2rem;}
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo-ph"><span>YOUR<br>LOGO</span></div>
+  <div class="nav-links">
+    <a href="index.html">Home 主頁</a>
+    <a href="index.html#about">About 關於</a>
+    <div class="nav-sep"></div>
+    <a href="index.html#services">Services 服務</a>
+    <a href="#">Shop 商店</a>
+    <a href="#">Blog 博客</a>
+    <div class="nav-sep"></div>
+    <a class="nav-book" href="https://www.instagram.com/ameliaandjewelry" target="_blank">Book Now 預約</a>
+  </div>
+</nav>
+
+<main>
+  <div class="hero-sub">
+    <div class="breadcrumb"><a href="index.html">KMC Mystic</a> → Reiki Healing 靈氣療愈</div>
+    <div class="hero-tag">Healing 療愈</div>
+    <h1 class="hero-title">Reiki <em>Healing</em></h1>
+    <div class="hero-zh">靈氣療愈</div>
+    <a class="amelia-credit" href="https://www.instagram.com/ameliaandjewelry" target="_blank">
+      <i class="fa-brands fa-instagram"></i>Service provided by Amelia · Amelia 提供
+    </a>
+    <p class="hero-desc">
+      靈氣是一種非常安全、溫和、具保護力、自然和諧的宇宙生命能量。「靈」指的是宇宙的、本源的智慧與秩序；「氣」則代表生命能量、生命力，亦可理解為流動於萬物之中的宇宙能量。<br><br>
+      Reiki is a safe, gentle and nurturing universal life energy. It balances the body and mind, relieves stress, and supports natural healing. Reiki is not associated with any religion.
+    </p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="sec-label">Pricing</div>
+  <div class="sec-title">價目表 Price List</div>
+  <div class="sec-zh">以下價格以台幣（TWD）計算</div>
+  <div class="currency-note">All prices in TWD 台幣 · 如需 AUD 報價請 DM 查詢</div>
+
+  <div class="price-section">
+
+    <div class="price-block">
+      <div class="price-block-header">
+        <div class="price-block-title">Reiki Healing Sessions 靈氣療癒服務</div>
+        <div class="price-block-zh">個人療癒</div>
+      </div>
+      <div class="price-row">
+        <div class="price-row-name">白井聖火靈氣療癒</div>
+        <div class="price-row-price">TWD $2,222</div>
+      </div>
+      <div class="price-row">
+        <div class="price-row-name">卡魯那慈悲靈氣＋主題療癒</div>
+        <div class="price-row-price">TWD $3,333</div>
+      </div>
+      <div class="price-row">
+        <div class="price-row-name">小品種靈氣療癒</div>
+        <div class="price-row-price">TWD $666</div>
+      </div>
+      <div class="price-row">
+        <div class="price-row-name">七大主題靈氣療癒</div>
+        <div class="price-row-price">TWD $1,666</div>
+      </div>
+      <div class="price-row">
+        <div class="price-row-name">單/雙人靈氣成願陣 7/21天</div>
+        <div class="price-row-price">TWD $1,275 起</div>
+      </div>
+      <div class="price-row">
+        <div class="price-row-name">水晶礦石の療癒、賦能及溝通</div>
+        <div class="price-row-price">TWD $666 起</div>
+      </div>
+      <div class="price-note">部分項目提供多次優惠，具體詳詢 · 適用會員儲值餘額優惠</div>
+    </div>
+
+    <div class="price-block">
+      <div class="price-block-header">
+        <div class="price-block-title">Animal Healing 動物靈氣療癒</div>
+        <div class="price-block-zh">動物服務</div>
+        <p class="price-block-desc">凡參與救援、中途、捐款或志工等公益行動，預約動物靈性項目皆享當次個案 7 折優惠。預約時請出示相關憑證。</p>
+      </div>
+      <div class="price-row">
+        <div class="price-row-name">動物靈氣療癒 <span class="price-row-sub">45 min</span></div>
+        <div class="price-row-price">TWD $1,111</div>
+      </div>
+      <div class="price-row">
+        <div class="price-row-name">動物溝通 <span class="price-row-sub">30 min</span></div>
+        <div class="price-row-price">TWD $1,111</div>
+      </div>
+      <div class="price-row">
+        <div class="price-row-name">動物信念挖掘＆療癒 <span class="price-row-sub">60 min</span></div>
+        <div class="price-row-price">TWD $1,888</div>
+      </div>
+      <div class="price-note">野生＆流浪動物半價 · 適用會員儲值餘額優惠</div>
+    </div>
+
+  </div>
+
+  <div class="notice">
+    <strong>請注意 —</strong> 所有療愈服務均不能取代正規醫療或心理治療。如有健康或情緒問題，請先諮詢專業醫護人員。<br>
+    <strong>Please note —</strong> Healing services are not a substitute for medical or psychological treatment. Please consult a qualified professional if you have health concerns.
+  </div>
+
+  <div class="divider"></div>
+
+  <div style="padding:0 2rem;">
+    <div class="sec-label">Connect with us</div>
+    <div class="sec-title">Follow Us</div>
+    <div class="sec-zh">聯繫我們</div>
+  </div>
+  <div style="margin:0 2rem 2rem;">
+    <div class="follow-block">
+      <div class="follow-grid">
+        <div class="follow-col">
+          <div class="col-title">Contact 聯絡方式</div>
+          <div class="contact-sub-grid">
+            <div>
+              <span class="sub-label">Kyra</span>
+              <a class="ci" href="mailto:Kyra@kmcservices.com.au"><span class="bi"><i class="fa-solid fa-envelope"></i></span>Kyra@kmcservices.com.au</a>
+              <div class="ci"><span class="bi"><i class="fa-brands fa-weixin"></i></span>WeChat: KMC_Mystic</div>
+              <a class="ci" href="https://www.instagram.com/kmc_mystic/" target="_blank"><span class="bi"><i class="fa-brands fa-instagram"></i></span>@kmc_mystic</a>
+            </div>
+            <div>
+              <span class="sub-label">Amelia</span>
+              <div class="ci"><span class="bi"><i class="fa-brands fa-weixin"></i></span>ameliamiao37</div>
+              <a class="ci" href="https://line.me/ti/p/J6MpvJ4Krr" target="_blank"><span class="bi"><i class="fa-brands fa-line"></i></span>LINE</a>
+              <a class="ci" href="https://www.instagram.com/ameliaandjewelry/" target="_blank"><span class="bi"><i class="fa-brands fa-instagram"></i></span>@ameliaandjewelry</a>
+            </div>
+          </div>
+        </div>
+        <div class="follow-col social-col">
+          <div class="col-title">Social 社交媒體</div>
+          <span class="sub-label">Kyra</span>
+          <a class="si" href="https://www.xiaohongshu.com" target="_blank"><span class="bi"><img src="xiaohongshu.png" alt="小紅書" style="width:17px;height:17px;border-radius:4px;"/></span>kyra_mystica</a>
+          <span class="sub-label" style="margin-top:.5rem;">Amelia</span>
+          <a class="si" href="#" target="_blank"><span class="bi"><img src="xiaohongshu.png" alt="小紅書" style="width:17px;height:17px;border-radius:4px;"/></span>ameliajewelry</a>
+          <span class="sub-label" style="margin-top:.5rem;">KMC Mystic</span>
+          <a class="si" href="https://www.facebook.com/KMCMystic/" target="_blank"><span class="bi"><i class="fa-brands fa-facebook"></i></span>KMC Mystic by Kyra</a>
+          <div class="si"><span class="bi"><i class="fa-brands fa-weixin"></i></span>公眾號: KMC Mystic</div>
+        </div>
+        <div class="follow-col book-col">
+          <div class="book-label">Book Amelia 預約</div>
+          <div class="book-desc">歡迎透過 Instagram 或以上方式聯絡 Amelia 預約。<br><br>DM Amelia on Instagram to book your session.</div>
+          <a class="book-btn" href="https://www.instagram.com/ameliaandjewelry" target="_blank"><i class="fa-brands fa-instagram"></i>DM Amelia</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>© 2025 KMC Mystic by Kyra · K Miracle Custom Services · kmcservices.com.au</footer>
+</body>
+</html>
