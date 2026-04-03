@@ -9,17 +9,9 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Montserrat:wght@300;400;500&display=swap');
     *{box-sizing:border-box;margin:0;padding:0;}
-    :root{
-      --bg:#07050f;--card:#0e0a1a;--mid:#110d1f;
-      --soft:#c5a8ff;--dim:rgba(180,140,255,0.38);--dimmer:rgba(180,140,255,0.15);
-      --text:#e8deff;--muted:rgba(200,170,255,0.58);--faint:rgba(180,140,255,0.32);
-      --border:rgba(155,110,255,0.14);
-      --serif:'Cormorant Garamond',serif;--sans:'Montserrat',sans-serif;
-    }
+    :root{--bg:#07050f;--card:#0e0a1a;--mid:#110d1f;--soft:#c5a8ff;--dim:rgba(180,140,255,0.38);--dimmer:rgba(180,140,255,0.15);--text:#e8deff;--muted:rgba(200,170,255,0.58);--faint:rgba(180,140,255,0.32);--border:rgba(155,110,255,0.14);--serif:'Cormorant Garamond',serif;--sans:'Montserrat',sans-serif;}
     body{font-family:var(--sans);background:var(--bg);color:var(--text);}
     a{text-decoration:none;color:inherit;}
-
-    /* NAV */
     nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 2.5rem;border-bottom:0.5px solid var(--border);}
     .nav-left{display:flex;align-items:center;gap:1.2rem;}
     .nav-back{font-size:12px;letter-spacing:1.5px;color:rgba(197,168,255,0.6);}
@@ -29,8 +21,6 @@
     .nav-links a{font-size:13px;letter-spacing:1.5px;color:rgba(220,200,255,0.85);}
     .nav-sep{width:0.5px;height:16px;background:rgba(155,110,255,0.2);}
     .nav-book{color:var(--soft)!important;border:1px solid rgba(155,110,255,0.5)!important;padding:8px 20px;border-radius:24px;text-transform:uppercase;font-size:12px!important;letter-spacing:2px!important;}
-
-    /* HERO */
     .hero{display:grid;grid-template-columns:1fr 1fr;min-height:460px;}
     .hero-left{padding:4.5rem 3rem;display:flex;flex-direction:column;justify-content:center;}
     .hero-tag{font-size:13px;letter-spacing:4px;color:rgba(197,168,255,0.85);text-transform:uppercase;margin-bottom:1rem;font-weight:500;}
@@ -43,21 +33,15 @@
     .hero-right{background:#05030d;display:flex;align-items:center;justify-content:center;border-left:0.5px solid var(--border);}
     .img-ph{width:260px;height:340px;border:0.5px dashed var(--dimmer);border-radius:8px;display:flex;align-items:center;justify-content:center;}
     .img-ph span{font-size:11px;letter-spacing:1.5px;color:var(--faint);text-align:center;line-height:1.6;}
-
-    /* DIVIDER + SECTIONS */
     .divider{width:36px;height:0.5px;background:var(--dimmer);margin:2.8rem auto;}
     .sec-label{text-align:center;font-size:12px;letter-spacing:5px;color:rgba(197,168,255,0.7);text-transform:uppercase;margin-bottom:.5rem;font-weight:500;}
     .sec-title{text-align:center;font-family:var(--serif);font-size:32px;font-weight:300;color:var(--text);margin-bottom:.3rem;}
     .sec-zh{text-align:center;font-size:14px;letter-spacing:3px;color:rgba(197,168,255,0.5);margin-bottom:2rem;}
-
-    /* CAT */
     .cat-wrap{margin:0 2rem 2rem;}
     .cat-header{display:flex;align-items:center;gap:.8rem;margin-bottom:1rem;}
     .cat-icon{font-size:16px;opacity:.8;}
     .cat-label-text{font-size:13px;letter-spacing:3px;color:rgba(197,168,255,.9);text-transform:uppercase;font-weight:500;white-space:nowrap;}
     .cat-line{flex:1;height:.5px;background:var(--border);}
-
-    /* SERVICE GRID */
     .svc-grid{display:grid;gap:1px;background:var(--border);border:.5px solid var(--border);border-radius:10px;overflow:hidden;}
     .g3{grid-template-columns:repeat(3,minmax(0,1fr));}
     .svc{padding:2rem 1.8rem;background:var(--card);text-align:center;transition:background .2s;}
@@ -70,12 +54,8 @@
     .svc-price{font-size:13px;color:var(--dim);letter-spacing:1px;}
     .svc-link{display:inline-block;font-size:11px;letter-spacing:2px;color:rgba(155,110,255,.55);border:.5px solid rgba(155,110,255,.2);padding:5px 14px;border-radius:20px;text-transform:uppercase;}
     .badge{display:inline-block;font-size:9px;letter-spacing:2px;color:rgba(180,140,255,.45);border:.5px solid rgba(180,140,255,.2);padding:3px 10px;border-radius:12px;text-transform:uppercase;margin-bottom:.6rem;}
-
-    /* NOTICE */
-    .notice{margin:0 2rem;padding:1.2rem 1.8rem;border-left:2px solid rgba(155,110,255,.3);background:rgba(155,110,255,.05);font-size:13px;color:rgba(200,170,255,.65);line-height:1.9;border-radius:0 8px 8px 0;}
+    .notice{padding:1.2rem 1.8rem;border-left:2px solid rgba(155,110,255,.3);background:rgba(155,110,255,.05);font-size:13px;color:rgba(200,170,255,.65);line-height:1.9;border-radius:0 8px 8px 0;}
     .notice strong{color:rgba(200,170,255,.75);font-weight:500;}
-
-    /* ABOUT */
     .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin:0 2rem;border:.5px solid var(--border);border-radius:12px;overflow:hidden;}
     .about-card{padding:2.5rem;background:var(--card);}
     .about-img{width:90px;height:90px;border-radius:50%;object-fit:cover;object-position:center top;margin-bottom:1.2rem;border:.5px solid var(--border);}
@@ -95,72 +75,36 @@
     .wechat-btn{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:1.5px;color:rgba(7,193,96,0.85);border:.5px solid rgba(7,193,96,0.35);padding:8px 18px;border-radius:20px;text-transform:uppercase;cursor:pointer;background:none;}
     .wechat-btn:hover{background:rgba(7,193,96,0.08);}
     .wechat-btn i{font-size:14px;color:#07C160;}
-
-    /* WECHAT MODAL */
-    .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:1000;align-items:center;justify-content:center;}
-    .modal-overlay.active{display:flex;}
-    .modal-box{background:var(--card);border:.5px solid var(--border);border-radius:16px;padding:2.5rem;text-align:center;max-width:320px;width:90%;}
-    .modal-title{font-family:var(--serif);font-size:24px;color:var(--soft);margin-bottom:.3rem;}
-    .modal-zh{font-size:12px;letter-spacing:2px;color:var(--faint);margin-bottom:1.5rem;}
-    .modal-qr{width:180px;height:180px;background:#fff;border-radius:12px;margin:0 auto 1.2rem;display:flex;align-items:center;justify-content:center;overflow:hidden;}
-    .modal-qr img{width:100%;height:100%;object-fit:contain;}
-    .modal-qr-ph{font-size:12px;color:#888;text-align:center;line-height:1.6;}
-    .modal-id{font-size:14px;color:var(--text);margin-bottom:.4rem;letter-spacing:1px;}
-    .modal-note{font-size:11px;color:var(--faint);line-height:1.7;margin-bottom:1.5rem;}
-    .modal-close{font-size:11px;letter-spacing:2px;color:var(--faint);border:.5px solid var(--border);padding:7px 20px;border-radius:20px;background:none;cursor:pointer;text-transform:uppercase;}
-    .modal-close:hover{color:var(--text);}
-
-    /* FOLLOW US */
-    .follow-outer{margin:0 2rem 2rem;}
-    .follow-block{background:var(--card);border:.5px solid var(--border);border-radius:12px;overflow:hidden;}
-    .follow-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:1px;background:var(--border);}
-
-    /* Contact col with person sub-cards */
-    .follow-contact-col{padding:1.8rem 2rem;background:var(--card);}
-    .col-title{font-size:10px;letter-spacing:3px;color:var(--faint);text-transform:uppercase;margin-bottom:1.2rem;font-weight:500;}
-    .person-cards{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:.5px solid var(--border);border-radius:10px;overflow:hidden;}
-    .person-card{padding:1.2rem 1.5rem;background:#0a0718;}
-    .person-name-serif{font-family:var(--serif);font-size:20px;font-weight:300;color:var(--soft);margin-bottom:.8rem;}
-    .person-name-serif em{font-style:italic;}
-
     .ci{display:flex;align-items:center;gap:10px;font-size:13px;color:rgba(200,170,255,.7);margin-bottom:.6rem;line-height:1.6;}
     .ci:hover{color:var(--soft);}
     .bi{width:20px;height:20px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
     .bi i{font-size:16px;}
     .bi img{width:18px;height:18px;border-radius:4px;object-fit:cover;display:block;}
     .fa-instagram{color:#E1306C;}.fa-facebook{color:#1877F2;}.fa-weixin{color:#07C160;}.fa-line{color:#06C755;}.fa-envelope{color:var(--soft);}
-
-    /* Social col */
-    .follow-social-col{padding:1.8rem 2rem;background:#080514;}
-    .sub-label{font-size:10px;letter-spacing:2px;color:rgba(197,168,255,.35);text-transform:uppercase;margin-bottom:.6rem;display:block;}
-    .si{display:flex;align-items:center;gap:10px;font-size:13px;color:rgba(200,170,255,.65);margin-bottom:.6rem;}
-    .si:hover{color:var(--soft);}
-
-    /* Book col */
-    .follow-book-col{padding:1.8rem 2rem;background:#07050f;display:flex;flex-direction:column;justify-content:center;border-left:.5px solid var(--border);}
-    .book-title{font-family:var(--serif);font-size:22px;color:var(--soft);margin-bottom:.8rem;font-weight:300;}
-    .book-desc{font-size:12px;color:rgba(200,170,255,.55);line-height:1.9;margin-bottom:1.4rem;}
-    .book-btn{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:1.5px;color:#e8deff;background:rgba(155,110,255,.2);border:1px solid rgba(155,110,255,.5);padding:11px 22px;border-radius:24px;text-transform:uppercase;}
-    .book-btn:hover{background:rgba(155,110,255,.3);}
-    .book-btn i{font-size:14px;color:#E1306C;}
-
     footer{text-align:center;padding:1.8rem;border-top:.5px solid var(--border);font-size:12px;letter-spacing:2px;color:var(--faint);}
+    /* Animal card */
+    .animal-card{background:var(--card);border:.5px solid rgba(155,110,255,0.25);border-radius:12px;padding:2rem 2.5rem;margin:0 2rem;margin-top:12px;}
+    .animal-tag{display:inline-flex;align-items:center;gap:6px;font-size:11px;letter-spacing:2px;color:rgba(197,168,255,.8);background:rgba(155,110,255,.12);border:.5px solid rgba(155,110,255,.3);padding:4px 14px;border-radius:12px;margin-bottom:1rem;}
+    .animal-desc{font-size:13px;line-height:1.9;color:var(--muted);margin-bottom:1.5rem;max-width:700px;}
+    .animal-links{display:flex;flex-wrap:wrap;gap:.8rem;}
+    .animal-link-btn{display:inline-flex;align-items:center;gap:6px;font-size:11px;letter-spacing:1.5px;color:rgba(197,168,255,.75);border:.5px solid rgba(155,110,255,.25);padding:8px 18px;border-radius:20px;text-transform:uppercase;}
+    .animal-link-btn:hover{background:rgba(155,110,255,.1);color:var(--soft);}
   </style>
 </head>
 <body>
 
 <!-- WECHAT MODAL -->
-<div class="modal-overlay" id="wechatModal" onclick="if(event.target===this)closeModal()">
-  <div class="modal-box">
-    <div class="modal-title">WeChat 微信</div>
-    <div class="modal-zh">掃描二維碼或搜索 ID 添加</div>
-    <div class="modal-qr">
-      <!-- Replace wechat-qr.jpg with your actual QR code image -->
-      <div class="modal-qr-ph">請上傳微信 QR Code 圖片<br>Replace with wechat-qr.jpg</div>
+<div id="wechatModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:1000;align-items:center;justify-content:center;">
+  <div style="background:#0e0a1a;border:0.5px solid rgba(155,110,255,0.2);border-radius:16px;padding:2.5rem;text-align:center;max-width:300px;width:90%;">
+    <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#c5a8ff;margin-bottom:.3rem;">WeChat 微信</div>
+    <div style="font-size:11px;letter-spacing:2px;color:rgba(180,140,255,0.32);margin-bottom:1.5rem;">掃描二維碼或搜索 ID 添加</div>
+    <div style="width:180px;height:180px;background:#fff;border-radius:12px;margin:0 auto 1.2rem;overflow:hidden;display:flex;align-items:center;justify-content:center;">
+      <img src="wechat-qr.jpg" alt="WeChat QR" style="width:100%;height:100%;object-fit:contain;" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
+      <div style="display:none;padding:1rem;font-size:11px;color:#888;text-align:center;line-height:1.6;">請將 QR Code 圖片命名為<br>wechat-qr.jpg<br>放入 mystic/ 資料夾</div>
     </div>
-    <div class="modal-id">KMC_Mystic</div>
-    <div class="modal-note">微信搜一搜「KMC_Mystic」即可添加<br>Search "KMC_Mystic" on WeChat to connect</div>
-    <button class="modal-close" onclick="closeModal()">Close 關閉</button>
+    <div style="font-size:14px;color:#e8deff;margin-bottom:.4rem;">KMC_Mystic</div>
+    <div style="font-size:11px;color:rgba(180,140,255,0.32);line-height:1.7;margin-bottom:1.5rem;">微信搜一搜「KMC_Mystic」即可添加</div>
+    <button onclick="closeWechat()" style="font-size:11px;letter-spacing:2px;color:rgba(180,140,255,0.45);border:0.5px solid rgba(155,110,255,0.2);padding:7px 20px;border-radius:20px;background:none;cursor:pointer;">Close 關閉</button>
   </div>
 </div>
 
@@ -205,7 +149,6 @@
     <div class="sec-title">Services 服務</div>
     <div class="sec-zh">卜卦 · 占星 · 魔法儀式 · 療愈</div>
 
-    <!-- 卜卦 -->
     <div class="cat-wrap">
       <div class="cat-header"><span class="cat-icon">🃏</span><span class="cat-label-text">Divination 卜卦</span><div class="cat-line"></div></div>
       <div class="svc-grid g3">
@@ -230,7 +173,6 @@
       </div>
     </div>
 
-    <!-- 占星 -->
     <div class="cat-wrap">
       <div class="cat-header"><span class="cat-icon">⭐</span><span class="cat-label-text">Astrology 占星</span><div class="cat-line"></div></div>
       <div class="svc-grid g3">
@@ -255,7 +197,6 @@
       </div>
     </div>
 
-    <!-- 魔法儀式 -->
     <div class="cat-wrap">
       <div class="cat-header"><span class="cat-icon">🕯</span><span class="cat-label-text">Ritual Magic 魔法儀式</span><div class="cat-line"></div></div>
       <div class="svc-grid g3">
@@ -280,7 +221,6 @@
       </div>
     </div>
 
-    <!-- 療愈 -->
     <div class="cat-wrap">
       <div class="cat-header"><span class="cat-icon">✨</span><span class="cat-label-text">Healing 療愈</span><div class="cat-line"></div></div>
       <div class="svc-grid g3">
@@ -303,24 +243,37 @@
           <a class="svc-link" href="theta.html">了解更多 Learn more →</a>
         </div>
       </div>
+
+      <!-- ANIMAL CARD -->
+      <div class="animal-card">
+        <div class="animal-tag">💕 動物公益專屬優惠 Animal Welfare Discount</div>
+        <p class="animal-desc">凡參與救援、中途、捐款或志工等公益行動，預約 BIFROST HEALING「動物靈性項目」皆享當次個案 7 折優惠。預約時請出示相關憑證，這是 Amelia 的一點心意，謝謝你們對動物的付出，希望這份療愈能帶給你和寶貝溫暖的支持。<br><br>Those involved in animal rescue, fostering, donation or volunteer work may enjoy a 30% discount on animal spiritual services. Please show proof at the time of booking.</p>
+        <div class="animal-links">
+          <a class="animal-link-btn" href="reiki.html">🐾 動物靈氣療癒 Animal Reiki →</a>
+          <a class="animal-link-btn" href="pendulum.html">🐾 動物 SRT Animal SRT →</a>
+          <a class="animal-link-btn" href="theta.html">🐾 動物溝通 & 前世 Animal Communication →</a>
+        </div>
+      </div>
     </div>
 
-    <div class="notice" style="margin-bottom:2rem;">
-      <strong>請注意 —</strong> 所有玄學及療愈服務均不能取代正規醫療或心理治療。如有健康或情緒問題，請先諮詢專業醫護人員。<br>
-      <strong>Please note —</strong> All metaphysical and healing services are not a substitute for medical or psychological treatment. Please consult a qualified professional if you have health concerns.
+    <div style="margin:0 2rem 2rem;">
+      <div class="notice">
+        <strong>請注意 —</strong> 所有玄學及療愈服務均不能取代正規醫療或心理治療。如有健康或情緒問題，請先諮詢專業醫護人員。<br>
+        <strong>Please note —</strong> All metaphysical and healing services are not a substitute for medical or psychological treatment. Please consult a qualified professional if you have health concerns.
+      </div>
     </div>
   </section>
 
   <div class="divider"></div>
 
-  <!-- ABOUT -->
   <section id="about">
     <div class="sec-label">The practitioners</div>
     <div class="sec-title">Meet the team 認識我們</div>
     <div class="sec-zh">Kyra · Amelia</div>
     <div class="about-grid">
       <div class="about-card">
-        <img class="about-img" src="kyra-photo.jpg" alt="Kyra"/>
+        <img class="about-img" src="kyra-photo.jpg" alt="Kyra" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+        <div class="about-img-ph" style="display:none;"><span>KYRA</span></div>
         <div class="about-role">Founder · Practitioner</div>
         <div class="about-name"><em>Kyra</em></div>
         <div class="about-name-zh">創辦人 · 玄學師</div>
@@ -332,7 +285,7 @@
         </div>
         <div class="about-btns">
           <a class="dm-btn" href="https://www.instagram.com/kmc_mystic/" target="_blank"><i class="fa-brands fa-instagram"></i>DM Kyra via Instagram</a>
-          <button class="wechat-btn" onclick="openModal()"><i class="fa-brands fa-weixin"></i>WeChat QR Code</button>
+          <button class="wechat-btn" onclick="document.getElementById('wechatModal').style.display='flex'"><i class="fa-brands fa-weixin"></i>WeChat QR Code</button>
         </div>
       </div>
       <div class="about-card">
@@ -357,54 +310,36 @@
   <div style="padding:0 2rem;">
     <div class="sec-label">Connect with us</div>
     <div class="sec-title">Follow Us 聯繫我們</div>
-    <div class="sec-zh" style="margin-bottom:1.5rem;"></div>
   </div>
-  <div class="follow-outer">
-    <div class="follow-block">
-      <div class="follow-grid">
-
-        <!-- Contact -->
-        <div class="follow-contact-col">
-          <div class="col-title">Contact 聯絡方式</div>
-          <div class="person-cards">
-            <div class="person-card">
-              <div class="person-name-serif"><em>Kyra</em></div>
-              <a class="ci" href="mailto:Kyra@kmcservices.com.au"><span class="bi"><i class="fa-solid fa-envelope"></i></span>Kyra@kmcservices.com.au</a>
-              <div class="ci" style="cursor:pointer;" onclick="openModal()"><span class="bi"><i class="fa-brands fa-weixin"></i></span>KMC_Mystic</div>
-              <a class="ci" href="https://www.instagram.com/kmc_mystic/" target="_blank"><span class="bi"><i class="fa-brands fa-instagram"></i></span>@kmc_mystic</a>
-            </div>
-            <div class="person-card">
-              <div class="person-name-serif"><em>Amelia</em></div>
-              <div class="ci"><span class="bi"><i class="fa-brands fa-weixin"></i></span>ameliamiao37</div>
-              <a class="ci" href="https://line.me/ti/p/J6MpvJ4Krr" target="_blank"><span class="bi"><i class="fa-brands fa-line"></i></span>LINE</a>
-              <a class="ci" href="https://www.instagram.com/ameliaandjewelry/" target="_blank"><span class="bi"><i class="fa-brands fa-instagram"></i></span>@ameliaandjewelry</a>
-            </div>
-          </div>
+  <div style="margin:1.5rem 2rem 2rem;">
+    <div style="background:var(--card);border:0.5px solid var(--border);border-radius:12px;overflow:hidden;">
+      <div style="display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:1px;background:var(--border);">
+        <div style="padding:1.8rem 2rem;background:var(--card);">
+          <div style="font-size:10px;letter-spacing:3px;color:var(--faint);text-transform:uppercase;margin-bottom:1.4rem;font-weight:500;">Contact 聯絡方式</div>
+          <div style="font-family:var(--serif);font-size:18px;font-style:italic;color:var(--soft);margin-bottom:.8rem;">Kyra</div>
+          <a class="ci" href="mailto:Kyra@kmcservices.com.au"><span class="bi"><i class="fa-solid fa-envelope"></i></span>Kyra@kmcservices.com.au</a>
+          <div class="ci" style="cursor:pointer;" onclick="document.getElementById('wechatModal').style.display='flex'"><span class="bi"><i class="fa-brands fa-weixin"></i></span>KMC_Mystic</div>
+          <a class="ci" href="https://www.instagram.com/kmc_mystic/" target="_blank"><span class="bi"><i class="fa-brands fa-instagram"></i></span>@kmc_mystic</a>
+          <div style="font-family:var(--serif);font-size:18px;font-style:italic;color:var(--soft);margin-top:1.2rem;margin-bottom:.8rem;">Amelia</div>
+          <div class="ci"><span class="bi"><i class="fa-brands fa-weixin"></i></span>ameliamiao37</div>
+          <a class="ci" href="https://line.me/ti/p/J6MpvJ4Krr" target="_blank"><span class="bi"><i class="fa-brands fa-line"></i></span>LINE</a>
+          <a class="ci" href="https://www.instagram.com/ameliaandjewelry/" target="_blank"><span class="bi"><i class="fa-brands fa-instagram"></i></span>@ameliaandjewelry</a>
         </div>
-
-        <!-- Social -->
-        <div class="follow-social-col">
-          <div class="col-title">Social 社交媒體</div>
-          <span class="sub-label">Kyra</span>
-          <a class="si" href="https://xhslink.com/m/7CBWan9iznq" target="_blank">
-            <span class="bi"><img src="xiaohongshu.png" alt="小紅書"/></span>kyra_mystica
-          </a>
-          <span class="sub-label" style="margin-top:.6rem;">Amelia</span>
-          <a class="si" href="https://xhslink.com/m/7OP4Dt7wPjU" target="_blank">
-            <span class="bi"><img src="xiaohongshu.png" alt="小紅書"/></span>bifrosthealing
-          </a>
-          <span class="sub-label" style="margin-top:.6rem;">KMC Mystic</span>
-          <a class="si" href="https://www.facebook.com/KMCMystic/" target="_blank"><span class="bi"><i class="fa-brands fa-facebook"></i></span>KMC Mystic by Kyra</a>
-          <div class="si"><span class="bi"><i class="fa-brands fa-weixin"></i></span>公眾號: KMC Mystic</div>
+        <div style="padding:1.8rem 2rem;background:#080514;">
+          <div style="font-size:10px;letter-spacing:3px;color:var(--faint);text-transform:uppercase;margin-bottom:1.4rem;font-weight:500;">Social 社交媒體</div>
+          <span style="font-size:10px;letter-spacing:2px;color:rgba(197,168,255,.35);text-transform:uppercase;margin-bottom:.6rem;display:block;">Kyra</span>
+          <a class="ci" href="https://xhslink.com/m/7CBWan9iznq" target="_blank"><span class="bi"><img src="xiaohongshu.png" alt="小紅書"/></span>kyra_mystica</a>
+          <span style="font-size:10px;letter-spacing:2px;color:rgba(197,168,255,.35);text-transform:uppercase;margin-top:.8rem;margin-bottom:.6rem;display:block;">Amelia</span>
+          <a class="ci" href="https://xhslink.com/m/7OP4Dt7wPjU" target="_blank"><span class="bi"><img src="xiaohongshu.png" alt="小紅書"/></span>bifrosthealing</a>
+          <span style="font-size:10px;letter-spacing:2px;color:rgba(197,168,255,.35);text-transform:uppercase;margin-top:.8rem;margin-bottom:.6rem;display:block;">KMC Mystic</span>
+          <a class="ci" href="https://www.facebook.com/KMCMystic/" target="_blank"><span class="bi"><i class="fa-brands fa-facebook"></i></span>KMC Mystic by Kyra</a>
+          <div class="ci"><span class="bi"><i class="fa-brands fa-weixin"></i></span>公眾號: KMC Mystic</div>
         </div>
-
-        <!-- Book -->
-        <div class="follow-book-col">
-          <div class="book-title">Ready to book?</div>
-          <div class="book-desc">歡迎透過 Instagram 私訊或以上任何方式聯絡預約。<br><br>Send a DM on Instagram or reach out via any contact above.</div>
-          <a class="book-btn" href="https://www.instagram.com/KMC_Mystic" target="_blank"><i class="fa-brands fa-instagram"></i>Book on Instagram →</a>
+        <div style="padding:1.8rem 2rem;background:#07050f;display:flex;flex-direction:column;justify-content:center;border-left:0.5px solid var(--border);">
+          <div style="font-family:var(--serif);font-size:22px;color:var(--soft);margin-bottom:.8rem;font-weight:300;">Ready to book?</div>
+          <div style="font-size:12px;color:rgba(200,170,255,.55);line-height:1.9;margin-bottom:1.4rem;">歡迎透過 Instagram 私訊或以上任何方式聯絡預約。<br><br>Send a DM on Instagram or reach out via any contact above.</div>
+          <a style="display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:1.5px;color:#e8deff;background:rgba(155,110,255,.2);border:1px solid rgba(155,110,255,.5);padding:11px 22px;border-radius:24px;text-transform:uppercase;text-decoration:none;" href="https://www.instagram.com/KMC_Mystic" target="_blank"><i class="fa-brands fa-instagram" style="color:#E1306C;font-size:14px;"></i>Book on Instagram →</a>
         </div>
-
       </div>
     </div>
   </div>
@@ -413,9 +348,12 @@
 <footer>© 2025 KMC Mystic by Kyra · K Miracle Custom Services · kmcservices.com.au</footer>
 
 <script>
-function openModal(){document.getElementById('wechatModal').classList.add('active');}
-function closeModal(){document.getElementById('wechatModal').classList.remove('active');}
-document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+document.getElementById('wechatModal').addEventListener('click',function(e){
+  if(e.target===this)this.style.display='none';
+});
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape')document.getElementById('wechatModal').style.display='none';
+});
 </script>
 </body>
 </html>
