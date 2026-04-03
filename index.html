@@ -1,147 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>K Miracle Custom Services | KMC</title>
-  <meta name="description" content="K Miracle Custom Services — KMC Nail Artistry, KMC Mystic by Kyra, KMC Boutique. Ancient arts. Modern souls. East meets West." />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
   <style>
-    body { background: #0d0a14; color: #e8e0f0; font-family: var(--font-sans); }
+    body { background: #0d0a14; color: #e8e0f0; }
 
     /* NAV */
-    .nav { border-bottom: 0.5px solid rgba(180,140,255,0.2); }
-    .nav-left { display: flex; align-items: center; gap: 1.2rem; }
-    .nav-logo-ph { width: 56px; height: 56px; border: 0.5px dashed rgba(180,140,255,0.3); }
-    .nav-logo-ph span { color: rgba(180,140,255,0.3); }
-    .nav-brand-main { font-family: var(--font-serif); font-size: 18px; font-weight: 300; letter-spacing: 4px; color: #c9a8ff; }
-    .nav-brand-sub { font-size: 9px; letter-spacing: 3px; color: rgba(180,140,255,0.35); margin-top: 3px; text-transform: uppercase; }
-    .nav-links { color: rgba(200,180,230,0.5); }
-    .nav-lang { display: flex; gap: 1rem; font-size: 10px; letter-spacing: 2px; color: rgba(200,180,230,0.5); }
-    .nav-lang span { cursor: pointer; }
-    .nav-lang .sep { color: rgba(180,140,255,0.2); }
+    .kmc-nav { border-bottom: .5px solid rgba(180,140,255,.2); background: #0d0a14; }
+    .nav-left { gap: 1.2rem; }
+    .nav-brand-wrap { display: flex; flex-direction: column; }
+    .nav-brand-main { font-family: var(--serif); font-size: 18px; font-weight: 300; letter-spacing: 4px; color: #c9a8ff; }
+    .nav-brand-sub  { font-size: 9px; letter-spacing: 3px; color: rgba(180,140,255,.35); text-transform: uppercase; }
+    .nav-logo-ph    { width: 56px; height: 56px; border: .5px dashed rgba(180,140,255,.3); }
+    .nav-logo-ph span { color: rgba(180,140,255,.3); }
+    .nav-lang { display: flex; gap: 1rem; font-size: 11px; letter-spacing: 2px; color: rgba(200,180,230,.5); }
+    .nav-lang .sep  { color: rgba(180,140,255,.2); }
+    .nav-hamburger span { background: rgba(197,168,255,.7); }
+    .nav-drawer { background: #0e0a1a; border-bottom: .5px solid rgba(180,140,255,.15); }
+    .nav-drawer a { color: rgba(220,200,255,.8); border-color: rgba(180,140,255,.1); }
 
     /* HERO */
-    .hero { text-align: center; padding: 5.5rem 2rem 2rem; }
-    .hero-label { font-size: 9px; letter-spacing: 5px; color: rgba(180,140,255,0.45); text-transform: uppercase; margin-bottom: 1.4rem; }
-    .hero-title { font-family: var(--font-serif); font-size: 54px; font-weight: 300; line-height: 1.15; color: #e8e0f0; margin-bottom: 0.4rem; }
+    .hero { text-align: center; padding: 5rem var(--page-pad) 2rem; }
+    .hero-label { font-size: 9px; letter-spacing: 5px; color: rgba(180,140,255,.45); text-transform: uppercase; margin-bottom: 1.4rem; }
+    .hero-title { font-family: var(--serif); font-size: 54px; font-weight: 300; line-height: 1.15; color: #e8e0f0; margin-bottom: .4rem; }
     .hero-title em { color: #b87fff; font-style: italic; }
-
-    .tagline-wrap { margin: 2rem auto 0; max-width: 500px; }
-    .tagline-main { font-family: var(--font-serif); font-size: 22px; font-weight: 300; color: #c9a8ff; letter-spacing: 2px; line-height: 1.5; }
+    .tagline-wrap { margin: 1.8rem auto 0; max-width: 500px; }
+    .tagline-main { font-family: var(--serif); font-size: 22px; font-weight: 300; color: #c9a8ff; letter-spacing: 2px; line-height: 1.5; }
     .tagline-main em { font-style: italic; color: #a07fff; }
-    .tagline-dots { display: flex; align-items: center; justify-content: center; gap: 1rem; margin: 1rem 0 0.6rem; }
-    .tagline-dot { width: 3px; height: 3px; border-radius: 50%; background: rgba(180,140,255,0.35); }
-    .tagline-line { flex: 1; max-width: 60px; height: 0.5px; background: rgba(180,140,255,0.2); }
-    .tagline-zh { font-size: 11px; letter-spacing: 4px; color: rgba(180,140,255,0.35); }
+    .tagline-dots { display: flex; align-items: center; justify-content: center; gap: 1rem; margin: 1rem 0 .6rem; }
+    .tagline-dot { width: 3px; height: 3px; border-radius: 50%; background: rgba(180,140,255,.35); }
+    .tagline-line { flex: 1; max-width: 60px; height: .5px; background: rgba(180,140,255,.2); }
+    .tagline-zh { font-size: 11px; letter-spacing: 4px; color: rgba(180,140,255,.35); }
 
-    .divider { background: rgba(180,140,255,0.25); }
+    .divider { background: rgba(180,140,255,.25); }
 
     /* CARDS */
-    .cards { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1px; background: rgba(180,140,255,0.1); margin: 0 2rem 3rem; border: 0.5px solid rgba(180,140,255,0.15); border-radius: var(--radius-md); overflow: hidden; }
-    .card { padding: 2.5rem 1.5rem; text-align: center; position: relative; transition: background 0.3s; }
-    .card-icon { font-size: 20px; margin-bottom: 1rem; opacity: 0.8; }
-    .card-name { font-family: var(--font-serif); font-size: 19px; font-weight: 300; margin-bottom: 0.2rem; letter-spacing: 1px; }
-    .card-name-zh { font-size: 10px; letter-spacing: 2px; color: rgba(200,180,230,0.38); margin-bottom: 0.4rem; }
-    .card-sub { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem; opacity: 0.4; }
-    .card-desc-en { font-size: 11px; line-height: 1.7; margin-bottom: 0.3rem; opacity: 0.5; }
-    .card-desc-zh { font-size: 11px; line-height: 1.7; margin-bottom: 1.5rem; opacity: 0.3; }
-    .card-btn { display: inline-block; font-size: 9px; letter-spacing: 2px; border: 0.5px solid; padding: 7px 18px; border-radius: var(--radius-pill); text-transform: uppercase; opacity: 0.65; }
+    .cards { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1px; background: rgba(180,140,255,.1); margin: 0 var(--page-pad) 3rem; border: .5px solid rgba(180,140,255,.15); border-radius: var(--radius-md); overflow: hidden; }
+    .card { padding: 2.5rem 1.5rem; text-align: center; position: relative; transition: background .3s; }
+    .card-icon    { font-size: 20px; margin-bottom: 1rem; opacity: .8; }
+    .card-name    { font-family: var(--serif); font-size: 19px; font-weight: 300; margin-bottom: .2rem; letter-spacing: 1px; }
+    .card-name-zh { font-size: 10px; letter-spacing: 2px; color: rgba(200,180,230,.38); margin-bottom: .4rem; }
+    .card-sub     { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem; opacity: .4; }
+    .card-desc-en { font-size: 11px; line-height: 1.7; margin-bottom: .3rem; opacity: .5; }
+    .card-desc-zh { font-size: 11px; line-height: 1.7; margin-bottom: 1.5rem; opacity: .3; }
+    .card-btn     { display: inline-block; font-size: 9px; letter-spacing: 2px; border: .5px solid; padding: 7px 18px; border-radius: 20px; text-transform: uppercase; opacity: .65; }
 
-    .card.nail { background: #120d1c; }
+    .card.nail    { background: #120d1c; }
     .card.nail:hover { background: #160f24; }
     .card.nail .card-name { color: #d4a8ff; }
-    .card.nail .card-btn { color: rgba(210,160,255,0.8); border-color: rgba(210,160,255,0.3); }
+    .card.nail .card-btn  { color: rgba(210,160,255,.8); border-color: rgba(210,160,255,.3); }
 
-    .card.mystic { background: #090612; }
+    .card.mystic  { background: #090612; }
     .card.mystic:hover { background: #0d0a18; }
     .card.mystic .card-name { color: #9b6fff; }
-    .card.mystic .card-btn { color: rgba(155,110,255,0.8); border-color: rgba(155,110,255,0.3); }
+    .card.mystic .card-btn  { color: rgba(155,110,255,.8); border-color: rgba(155,110,255,.3); }
 
-    .card.boutique { background: #0e0b18; opacity: 0.75; cursor: default; }
+    .card.boutique { background: #0e0b18; opacity: .75; cursor: default; }
     .card.boutique .card-name { color: #bc9be8; }
-    .card.boutique .card-btn { color: rgba(188,155,232,0.4); border-color: rgba(188,155,232,0.18); cursor: default; }
+    .card.boutique .card-btn  { color: rgba(188,155,232,.4); border-color: rgba(188,155,232,.18); }
 
-    .soon-badge { position: absolute; top: 1rem; right: 1rem; font-size: 8px; letter-spacing: 2px; color: rgba(180,140,255,0.5); border: 0.5px solid rgba(180,140,255,0.2); padding: 3px 10px; border-radius: 10px; text-transform: uppercase; }
+    .soon-badge { position: absolute; top: 1rem; right: 1rem; font-size: 8px; letter-spacing: 2px; color: rgba(180,140,255,.5); border: .5px solid rgba(180,140,255,.2); padding: 3px 10px; border-radius: 10px; text-transform: uppercase; }
 
-    /* FOOTER */
-    .site-footer { border-top: 0.5px solid rgba(180,140,255,0.1); }
-    .footer-brand { font-family: var(--font-serif); font-size: 14px; letter-spacing: 4px; color: rgba(180,140,255,0.25); margin-bottom: 0.4rem; }
-    .footer-text { font-size: 9px; letter-spacing: 2px; color: rgba(180,140,255,0.18); }
+    .site-footer { border-top: .5px solid rgba(180,140,255,.1); }
+    .footer-brand { font-family: var(--serif); font-size: 14px; letter-spacing: 4px; color: rgba(180,140,255,.25); margin-bottom: .4rem; }
+    .footer-text  { font-size: 9px; letter-spacing: 2px; color: rgba(180,140,255,.18); }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .hero-title   { font-size: 36px; }
+      .tagline-main { font-size: 17px; }
+      .cards        { grid-template-columns: 1fr; margin: 0 var(--page-pad) 2rem; }
+      .card         { padding: 2rem 1.5rem; }
+      .nav-lang     { display: none; }
+    }
+    @media (max-width: 480px) {
+      .hero-title { font-size: 28px; }
+    }
   </style>
 </head>
 <body>
 
-  <nav class="nav">
-    <div class="nav-left">
-      <div class="nav-logo-ph"><span>YOUR<br>LOGO</span></div>
-      <div>
-        <div class="nav-brand-main">KMC</div>
-        <div class="nav-brand-sub">K Miracle Custom Services</div>
-      </div>
+<nav class="kmc-nav">
+  <div class="nav-left">
+    <div class="nav-logo-ph"><span>YOUR<br>LOGO</span></div>
+    <div class="nav-brand-wrap">
+      <div class="nav-brand-main">KMC</div>
+      <div class="nav-brand-sub">K Miracle Custom Services</div>
     </div>
-    <div class="nav-lang">
-      <span>EN</span>
-      <span class="sep">|</span>
-      <span>中文</span>
-    </div>
-  </nav>
+  </div>
+  <div class="nav-lang">
+    <span>EN</span><span class="sep">|</span><span>中文</span>
+  </div>
+  <button class="nav-hamburger" onclick="document.getElementById('mainDrawer').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-drawer" id="mainDrawer">
+  <a href="nails/">💅 KMC Nail Artistry</a>
+  <a href="mystic/">🔮 KMC Mystic by Kyra</a>
+  <a href="boutique/">🛍️ KMC Boutique</a>
+</div>
 
-  <main>
-    <section class="hero">
-      <div class="hero-label">K Miracle Custom Services</div>
-      <h1 class="hero-title">Where <em>beauty</em> meets<br>the mystical</h1>
-      <div class="tagline-wrap">
-        <div class="tagline-main">Ancient arts. <em>Modern souls.</em><br>East meets West.</div>
-        <div class="tagline-dots">
-          <div class="tagline-line"></div>
-          <div class="tagline-dot"></div>
-          <div class="tagline-dot"></div>
-          <div class="tagline-dot"></div>
-          <div class="tagline-line"></div>
-        </div>
-        <div class="tagline-zh">古老藝術 · 現代靈魂 · 中西匯聚</div>
+<main>
+  <section class="hero">
+    <div class="hero-label">K Miracle Custom Services</div>
+    <h1 class="hero-title">Where <em>beauty</em> meets<br>the mystical</h1>
+    <div class="tagline-wrap">
+      <div class="tagline-main">Ancient arts. <em>Modern souls.</em><br>East meets West.</div>
+      <div class="tagline-dots">
+        <div class="tagline-line"></div>
+        <div class="tagline-dot"></div><div class="tagline-dot"></div><div class="tagline-dot"></div>
+        <div class="tagline-line"></div>
       </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <div class="cards">
-      <a class="card nail" href="nails/">
-        <div class="card-icon">💅</div>
-        <div class="card-name">KMC Nail Artistry</div>
-        <div class="card-name-zh">美甲服務</div>
-        <div class="card-sub">Nails & Press-Ons</div>
-        <div class="card-desc-en">Bespoke nail art crafted<br>for the confident woman</div>
-        <div class="card-desc-zh">專屬美甲，展現女性自信</div>
-        <div class="card-btn">Explore →</div>
-      </a>
-      <a class="card mystic" href="mystic/">
-        <div class="card-icon">🔮</div>
-        <div class="card-name">KMC Mystic by Kyra</div>
-        <div class="card-name-zh">玄學服務</div>
-        <div class="card-sub">Tarot · Healing · Astrology</div>
-        <div class="card-desc-en">Ancient wisdom for<br>modern seekers</div>
-        <div class="card-desc-zh">古老智慧，引領現代靈魂</div>
-        <div class="card-btn">Discover →</div>
-      </a>
-      <div class="card boutique">
-        <div class="soon-badge">Coming Soon</div>
-        <div class="card-icon">🛍️</div>
-        <div class="card-name">KMC Boutique</div>
-        <div class="card-name-zh">精品網店</div>
-        <div class="card-sub">Crystals · Candles · Press-Ons</div>
-        <div class="card-desc-en">Curated nail & mystic products<br>— opening soon</div>
-        <div class="card-desc-zh">美甲及玄學產品，即將開幕</div>
-        <div class="card-btn">Coming Soon</div>
-      </div>
+      <div class="tagline-zh">古老藝術 · 現代靈魂 · 中西匯聚</div>
     </div>
-  </main>
+  </section>
 
-  <footer class="site-footer">
-    <div class="footer-brand">K Miracle Custom Services</div>
-    <div class="footer-text">© 2025 KMC · kmcservices.com.au</div>
-  </footer>
+  <div class="divider"></div>
 
+  <div class="cards">
+    <a class="card nail" href="nails/">
+      <div class="card-icon">💅</div>
+      <div class="card-name">KMC Nail Artistry</div>
+      <div class="card-name-zh">美甲服務</div>
+      <div class="card-sub">Nails & Press-Ons</div>
+      <div class="card-desc-en">Bespoke nail art crafted<br>for the confident woman</div>
+      <div class="card-desc-zh">專屬美甲，展現女性自信</div>
+      <div class="card-btn">Explore →</div>
+    </a>
+    <a class="card mystic" href="mystic/">
+      <div class="card-icon">🔮</div>
+      <div class="card-name">KMC Mystic by Kyra</div>
+      <div class="card-name-zh">玄學服務</div>
+      <div class="card-sub">Tarot · Healing · Astrology</div>
+      <div class="card-desc-en">Ancient wisdom for<br>modern seekers</div>
+      <div class="card-desc-zh">古老智慧，引領現代靈魂</div>
+      <div class="card-btn">Discover →</div>
+    </a>
+    <div class="card boutique">
+      <div class="soon-badge">Coming Soon</div>
+      <div class="card-icon">🛍️</div>
+      <div class="card-name">KMC Boutique</div>
+      <div class="card-name-zh">精品網店</div>
+      <div class="card-sub">Crystals · Candles · Press-Ons</div>
+      <div class="card-desc-en">Curated nail & mystic products<br>— opening soon</div>
+      <div class="card-desc-zh">美甲及玄學產品，即將開幕</div>
+      <div class="card-btn">Coming Soon</div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-brand">K Miracle Custom Services</div>
+  <div class="footer-text">© 2025 KMC · kmcservices.com.au</div>
+</footer>
+
+<script>
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') document.getElementById('mainDrawer').classList.remove('open');
+});
+</script>
 </body>
 </html>
